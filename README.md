@@ -15,3 +15,4 @@ Credits goes to all the various projects and users that collected and published 
 - [Starlight-SMO-LayoutEditing](https://github.com/CraftyBoss/Starlight-SMO-LayoutEditing)
 - [SMO-Galaxy-Gravity](https://github.com/CraftyBoss/SMO-Galaxy-Gravity)
 - [OdysseyHeaders](https://github.com/RicBent/OdysseyHeaders)
+- [Superstar](https://github.com/GRAnimated/Superstar)
