@@ -1,0 +1,61 @@
+#pragma once
+
+class KoopaCap
+{
+public:
+    create(al::LiveActor const*, al::ActorInitInfo const&, KoopaCapPlayerBinder*, bool);
+    KoopaCap(char const*, al::LiveActor const*);
+    init(al::ActorInitInfo const&);
+    makeActorDead();
+    appear();
+    kill();
+    disappear();
+    control();
+    updateCollider();
+    attackSensor(al::HitSensor*, al::HitSensor*);
+    receiveMsg(al::SensorMsg const*, al::HitSensor*, al::HitSensor*);
+    isEquip() const;
+    isWaitHover() const;
+    isDown() const;
+    isEndWaitHoverStart() const;
+    isSpinMove() const;
+    isAttach() const;
+    isNecessaryUpdateAttachQT() const;
+    isFlyBack() const;
+    isEndFlyBack() const;
+    isDownRecover() const;
+    isPlayingCatchDemo() const;
+    isPlayerBinding() const;
+    startDemo();
+    endDemo();
+    startAttach(char const*);
+    startWaitHover(int);
+    startSpinThrowChase(sead::Vector3<float> const*, float, bool);
+    startDownRecover();
+    forceStartFlyBackIfNearPlayerToKoopa();
+    requestStartAction(char const*);
+    onFinish();
+    offFinish();
+    setFastPunchRate(float);
+    endEquipAndBlowDown();
+    endEquipAndKill();
+    exeDemo();
+    exeAppear();
+    exeWait();
+    exeAttach();
+    exeWaitHoverDelay();
+    exeWaitHoverStart();
+    exeWaitHover();
+    exeSpinThrow();
+    exeFlyBack();
+    exeFlyBackAfter();
+    exeSpinHit();
+    exeDownJumpStart();
+    exeDownJump();
+    exeDownJumpEnd();
+    exeDown();
+    exeDownRecoverStart();
+    exeDownRecover();
+    exeDownRecoverEnd();
+    exeEquip();
+};

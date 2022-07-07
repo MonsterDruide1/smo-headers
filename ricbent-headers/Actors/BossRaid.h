@@ -1,0 +1,66 @@
+#pragma once
+
+class BossRaid
+{
+public:
+    BossRaid(char const*);
+    init(al::ActorInitInfo const&);
+    initRivetList(al::ActorInitInfo const&);
+    killRivetAll();
+    invalidateCollisionAll();
+    startDemoBattleStart();
+    startBattle();
+    tryGetFollowTargetInfo(al::LiveActor**, sead::Vector3<float>*, sead::Vector3<float>*, char const**, al::ByamlIter const&);
+    endBattleStartDemo();
+    attackSensor(al::HitSensor*, al::HitSensor*);
+    isElectric() const;
+    receiveMsg(al::SensorMsg const*, al::HitSensor*, al::HitSensor*);
+    isEnableDamage() const;
+    receiveEvent(al::EventFlowEventData const*);
+    calcAnim();
+    updatePlayerPose();
+    control();
+    isPullOutRivetAll() const;
+    hintCapMessage(char const*, int);
+    isPullOutRivetAny() const;
+    isNearWeakPoint() const;
+    damageCapMessage();
+    isFirstDemo() const;
+    isEnableSkipDemo() const;
+    skipDemo();
+    exeBattleStartWait();
+    exePreDemoBattleStart();
+    setUpDemoBattleStart();
+    exeDemoBattleStart();
+    startActionMain(char const*);
+    getEnableRivetCount() const;
+    resetChainAll();
+    exeStartAttack();
+    exeBreathAttack();
+    exeGroundAttack();
+    exeTired();
+    appearRivetPopnAll();
+    exeUpSign();
+    startElectricSignParts();
+    exeUp();
+    killRivetPopnAll();
+    startAttack();
+    exeDamage();
+    exeRoarSign();
+    exeRoar();
+    resetRivetAll();
+    startRoarAnimParts();
+    exePreDemoBattleEnd();
+    setUpDemoBattleEnd();
+    exeDemoBattleEnd();
+    exeEndTalk();
+    getShotLevel() const;
+    startElectricParts();
+    endElectricParts();
+    validateCollisionAll();
+    killElectoricAll();
+    killChainAll();
+    appearAndHideRivetAll();
+    showRivetAll();
+    startDemoBattleEnd();
+};

@@ -1,0 +1,78 @@
+#pragma once
+
+namespace nn { namespace gfx { namespace detail { namespace CommandBufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > {
+
+GetCommandMemoryAlignment(nn::gfx::detail::DeviceImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*);
+GetControlMemoryAlignment(nn::gfx::detail::DeviceImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*);
+CommandBufferImpl();
+~CommandBufferImpl();
+Initialize(nn::gfx::detail::DeviceImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::CommandBufferInfo const&);
+Finalize(nn::gfx::detail::DeviceImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*);
+AddCommandMemory(nn::gfx::detail::MemoryPoolImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, long, unsigned long);
+AddControlMemory(void*, unsigned long);
+SetOutOfCommandMemoryEventCallback(void (*)(nn::gfx::TCommandBuffer<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::OutOfMemoryEventArg const&));
+SetOutOfControlMemoryEventCallback(void (*)(nn::gfx::TCommandBuffer<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::OutOfMemoryEventArg const&));
+Reset();
+Begin();
+End();
+Dispatch(int, int, int);
+Draw(nn::gfx::PrimitiveTopology, int, int);
+Draw(nn::gfx::PrimitiveTopology, int, int, int, int);
+DrawIndexed(nn::gfx::PrimitiveTopology, nn::gfx::IndexFormat, nn::gfx::GpuAddress const&, int, int);
+DrawIndexed(nn::gfx::PrimitiveTopology, nn::gfx::IndexFormat, nn::gfx::GpuAddress const&, int, int, int, int);
+DispatchIndirect(nn::gfx::GpuAddress const&);
+DrawIndirect(nn::gfx::PrimitiveTopology, nn::gfx::GpuAddress const&);
+DrawIndexedIndirect(nn::gfx::PrimitiveTopology, nn::gfx::IndexFormat, nn::gfx::GpuAddress const&, nn::gfx::GpuAddress const&);
+SetPipeline(nn::gfx::detail::PipelineImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetRasterizerState(nn::gfx::detail::RasterizerStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetBlendState(nn::gfx::detail::BlendStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetDepthStencilState(nn::gfx::detail::DepthStencilStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetVertexState(nn::gfx::detail::VertexStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetTessellationState(nn::gfx::detail::TessellationStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetShader(nn::gfx::detail::ShaderImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, int);
+SetRenderTargets(int, nn::gfx::detail::ColorTargetViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const* const*, nn::gfx::detail::DepthStencilViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetVertexBuffer(int, nn::gfx::GpuAddress const&, long, unsigned long);
+SetViewportScissorState(nn::gfx::detail::ViewportScissorStateImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+CopyBuffer(nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, long, nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, long, unsigned long);
+CopyImage(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::TextureSubresource const&, int, int, int, nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::TextureCopyRegion const&);
+CopyBufferToImage(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::BufferTextureCopyRegion const&);
+CopyImageToBuffer(nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::BufferTextureCopyRegion const&);
+CopyBufferToImage(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::TextureCopyRegion const&, nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, long);
+CopyImageToBuffer(nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, long, nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::TextureCopyRegion const&);
+BlitImage(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::TextureCopyRegion const&, nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::TextureCopyRegion const&, int);
+ClearBuffer(nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, long, unsigned long, unsigned int);
+ClearColor(nn::gfx::detail::ColorTargetViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, float, float, float, float, nn::gfx::TextureArrayRange const*);
+ClearColorTarget(nn::gfx::detail::ColorTargetViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::ClearColorValue const&, nn::gfx::TextureArrayRange const*);
+ClearDepthStencil(nn::gfx::detail::DepthStencilViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, float, int, nn::gfx::DepthStencilClearMode, nn::gfx::TextureArrayRange const*);
+Resolve(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, int, int, nn::gfx::detail::ColorTargetViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::TextureArrayRange const*);
+FlushMemory(int);
+InvalidateMemory(int);
+CallCommandBuffer(nn::gfx::detail::CommandBufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+CopyCommandBuffer(nn::gfx::detail::CommandBufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetBufferStateTransition(nn::gfx::detail::BufferImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, int, int, int, int);
+SetTextureStateTransition(nn::gfx::detail::TextureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*, nn::gfx::TextureSubresourceRange const*, int, int, int, int);
+SetDescriptorPool(nn::gfx::detail::DescriptorPoolImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetRootSignature(nn::gfx::PipelineType, nn::gfx::detail::RootSignatureImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > >*);
+SetRootBufferDescriptorTable(nn::gfx::PipelineType, int, nn::gfx::DescriptorSlot const&);
+SetRootTextureAndSamplerDescriptorTable(nn::gfx::PipelineType, int, nn::gfx::DescriptorSlot const&, nn::gfx::DescriptorSlot const&);
+SetRootConstantBuffer(nn::gfx::PipelineType, int, nn::gfx::GpuAddress const&, unsigned long);
+SetRootUnorderedAccessBuffer(nn::gfx::PipelineType, int, nn::gfx::GpuAddress const&, unsigned long);
+SetRootTextureAndSampler(nn::gfx::PipelineType, int, nn::gfx::detail::TextureViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::detail::SamplerImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+BeginQuery(nn::gfx::QueryTarget);
+EndQuery(nn::gfx::GpuAddress const&, nn::gfx::QueryTarget);
+WriteTimestamp(nn::gfx::GpuAddress const&);
+SetDepthBounds(float, float);
+SetLineWidth(float);
+SetViewports(int, int, nn::gfx::ViewportStateInfo const*);
+SetScissors(int, int, nn::gfx::ScissorStateInfo const*);
+SetConstantBuffer(int, nn::gfx::ShaderStage, nn::gfx::DescriptorSlot const&);
+SetUnorderedAccessBuffer(int, nn::gfx::ShaderStage, nn::gfx::DescriptorSlot const&);
+SetTextureAndSampler(int, nn::gfx::ShaderStage, nn::gfx::DescriptorSlot const&, nn::gfx::DescriptorSlot const&);
+SetTexture(int, nn::gfx::ShaderStage, nn::gfx::DescriptorSlot const&);
+SetImage(int, nn::gfx::ShaderStage, nn::gfx::DescriptorSlot const&);
+SetConstantBuffer(int, nn::gfx::ShaderStage, nn::gfx::GpuAddress const&, unsigned long);
+SetUnorderedAccessBuffer(int, nn::gfx::ShaderStage, nn::gfx::GpuAddress const&, unsigned long);
+SetTextureAndSampler(int, nn::gfx::ShaderStage, nn::gfx::detail::TextureViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*, nn::gfx::detail::SamplerImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+SetImage(int, nn::gfx::ShaderStage, nn::gfx::detail::TextureViewImpl<nn::gfx::ApiVariation<nn::gfx::ApiType<4>, nn::gfx::ApiVersion<8> > > const*);
+
+} } } } 

@@ -1,0 +1,63 @@
+#pragma once
+
+class BossMagma
+{
+public:
+    BossMagma(char const*);
+    init(al::ActorInitInfo const&);
+    start();
+    notifyBreathLv3();
+    setBreathProjMtx();
+    attackSensor(al::HitSensor*, al::HitSensor*);
+    receiveMsg(al::SensorMsg const*, al::HitSensor*, al::HitSensor*);
+    isBubbleDropAttack(al::SensorMsg const*, al::HitSensor*, al::HitSensor*) const;
+    calcResetId() const;
+    isBubbleRiseAttack(al::SensorMsg const*, al::HitSensor*, al::HitSensor*) const;
+    isFirstDemo() const;
+    isEnableSkipDemo() const;
+    skipDemo();
+    exeWait();
+    exeCatch();
+    exeRequestStartDemo();
+    exeStartDemo();
+    pushDemoPose();
+    endDemo();
+    popDemoPose();
+    exeMoveTurn();
+    moveOnRail(float);
+    exeMove();
+    exeAttackTurn();
+    riseToAttackHeight();
+    calcBreathTargetPos(bool);
+    exeAttackBreathStart();
+    exeAttackBreath();
+    startBreath();
+    fixBreathTargetPos();
+    checkPlayerOnBreath();
+    calcJawPos(sead::Vector3<float>*) const;
+    endBreath();
+    endAttackBreath();
+    exeAttackBreathEnd();
+    exeBackToRail();
+    exeHitStomach();
+    exeDamage();
+    killBreath();
+    exeDamageEnd();
+    exeRequestEndDemo();
+    exeEndDemo();
+    exeDie();
+    notifyBullet();
+    notifyShotMoveReady();
+    notifyShotMoveStart();
+    notifyRollReady();
+    notifyRollStart();
+    notifyShotLv3Ready();
+    notifyShotLv3Start();
+    getBreathJoint1MtxPtr() const;
+    control();
+    controlPartialAnim();
+    controlAim();
+    calcAnim();
+    calcRailTargetPos(sead::Vector3<float>*) const;
+    turnToPlayer(sead::Vector3<float> const&, float);
+};

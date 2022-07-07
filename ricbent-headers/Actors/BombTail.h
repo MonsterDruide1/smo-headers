@@ -1,0 +1,61 @@
+#pragma once
+
+class BombTail
+{
+public:
+    BombTail(char const*, MultiGateKeeperWatcher*);
+    init(al::ActorInitInfo const&);
+    startBattleStartDemo();
+    control();
+    kill();
+    killPartsAll();
+    attackSensor(al::HitSensor*, al::HitSensor*);
+    receiveMsg(al::SensorMsg const*, al::HitSensor*, al::HitSensor*);
+    damageAndSetNerve();
+    isAlreadyDead() const;
+    exeBattleStartDemo();
+    offSkirtDynamics();
+    offAnimDynamics();
+    onCap();
+    changeToWalk();
+    onAnimDynamics();
+    onSkirtDynamics();
+    exeWait();
+    startActionWithTail(char const*);
+    exeAppearBombSign();
+    exeAppearBomb();
+    appearTailBomb();
+    exeWalkToSide();
+    exeWalk();
+    isChanceAttack() const;
+    decideTailThrowTargetFromPlayer(sead::Vector3<float> const&, bool);
+    exeGuard();
+    exeAppearChanceBombSign();
+    exeAppearChanceBomb();
+    exeAttackStart();
+    exeAttackSpeedy();
+    exeAttackChance();
+    exeAttackChanceLandStart();
+    exeAttackChanceLand();
+    tryStartBounce();
+    exeAttackEnd();
+    changeToAttackPrepare();
+    exeBounceStart();
+    exeBounce();
+    offCap();
+    exeBounceEnd();
+    exePanic();
+    tryChangeToEndDamageChance();
+    exeRunStart();
+    exeRun();
+    exeCapHit();
+    exeRunCapHitWait();
+    exeEndDamageChance();
+    exeDamage();
+    exeResetAttack();
+    exeBattleEndDemo();
+    throwBomb(sead::Vector3<float> const&, sead::Vector3<float> const&);
+    throwBombRun();
+    popFromDamageArray();
+    decideTailThrowTarget(int, sead::Vector3<float> const&);
+};

@@ -1,0 +1,101 @@
+#pragma once
+
+namespace nn { namespace atk { namespace detail { 
+
+class BasicSound
+{
+public:
+    GetRuntimeTypeInfoStatic();
+    BasicSound();
+    Initialize();
+    SetPriority(int, int);
+    GetPriority(int*, int*) const;
+    ClearIsFinalizedForCannotAllocatedResourceFlag();
+    Finalize();
+    SetId(unsigned int);
+    IsAttachedGeneralHandle();
+    DetachGeneralHandle();
+    IsAttachedTempGeneralHandle();
+    DetachTempGeneralHandle();
+    StartPrepared();
+    Stop(int);
+    SetPlayerPriority(int);
+    ForceStop();
+    Pause(bool, int);
+    Pause(bool, int, nn::atk::PauseMode);
+    Mute(bool, int);
+    SetAutoStopCounter(int);
+    FadeIn(int);
+    IsPause() const;
+    IsMute() const;
+    Update();
+    UpdateParam();
+    UpdateMoveValue();
+    CalculateVolume() const;
+    CalculatePitch() const;
+    CalculateLpfFrequency() const;
+    CalculateOutLineFlag() const;
+    CalculateBiquadFilter(int*, float*) const;
+    CalculateOutputParam(nn::atk::detail::OutputParam*, nn::atk::OutputDevice) const;
+    ApplyCommonParam(nn::atk::detail::OutputParam&) const;
+    AttachPlayerHeap(nn::atk::detail::PlayerHeap*);
+    DetachPlayerHeap(nn::atk::detail::PlayerHeap*);
+    AttachSoundPlayer(nn::atk::SoundPlayer*);
+    DetachSoundPlayer(nn::atk::SoundPlayer*);
+    AttachSoundActor(nn::atk::SoundActor*);
+    DetachSoundActor(nn::atk::SoundActor*);
+    AttachExternalSoundPlayer(nn::atk::detail::ExternalSoundPlayer*);
+    DetachExternalSoundPlayer(nn::atk::detail::ExternalSoundPlayer*);
+    GetRemainingFadeFrames() const;
+    GetRemainingPauseFadeFrames() const;
+    GetRemainingMuteFadeFrames() const;
+    CalculateSoundParamCalculationValues(nn::atk::SoundParamCalculationValues*) const;
+    SetInitialVolume(float);
+    GetInitialVolume() const;
+    SetVolume(float, int);
+    GetVolume() const;
+    SetPitch(float);
+    GetPitch() const;
+    SetLpfFreq(float);
+    GetLpfFreq() const;
+    SetBiquadFilter(int, float);
+    GetBiquadFilter(int*, float*) const;
+    SetOutputLine(unsigned int);
+    GetOutputLine() const;
+    ResetOutputLine();
+    SetMixMode(nn::atk::MixMode);
+    GetMixMode();
+    SetPan(float);
+    GetPan() const;
+    SetSurroundPan(float);
+    GetSurroundPan() const;
+    SetMainSend(float);
+    GetMainSend() const;
+    SetFxSend(nn::atk::AuxBus, float);
+    GetFxSend(nn::atk::AuxBus) const;
+    SetOutputVolume(nn::atk::OutputDevice, float);
+    SetOutputChannelMixParameter(nn::atk::OutputDevice, unsigned int, nn::atk::MixParameter);
+    SetOutputPan(nn::atk::OutputDevice, float);
+    SetOutputSurroundPan(nn::atk::OutputDevice, float);
+    SetOutputMainSend(nn::atk::OutputDevice, float);
+    SetOutputFxSend(nn::atk::OutputDevice, nn::atk::AuxBus, float);
+    GetOutputVolume(nn::atk::OutputDevice) const;
+    GetOutputChannelMixParameter(nn::atk::OutputDevice, unsigned int) const;
+    GetOutputPan(nn::atk::OutputDevice) const;
+    GetOutputSurroundPan(nn::atk::OutputDevice) const;
+    GetOutputMainSend(nn::atk::OutputDevice) const;
+    GetOutputFxSend(nn::atk::OutputDevice, nn::atk::AuxBus) const;
+    SetPanMode(nn::atk::PanMode);
+    SetPanCurve(nn::atk::PanCurve);
+    SetAmbientInfo(nn::atk::detail::BasicSound::AmbientInfo const&);
+    GetAmbientPriority(nn::atk::detail::BasicSound::AmbientInfo const&, unsigned int);
+    SetSetupTick(nn::os::Tick const&);
+    SetSoundArchive(nn::atk::SoundArchive const*);
+    GetRuntimeTypeInfo() const;
+    ~BasicSound();
+    OnUpdatePlayerPriority();
+    OnUpdateParam();
+    g_LastInstanceId;
+};
+
+} } } 

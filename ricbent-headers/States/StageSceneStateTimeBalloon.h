@@ -1,0 +1,61 @@
+#pragma once
+
+class StageSceneStateTimeBalloon
+{
+public:
+    StageSceneStateTimeBalloon(StageScene*, TimeBalloonDirector*, TimeBalloonSequenceInfo*, GameDataHolder*, StageSceneLayout*, al::ActorInitInfo const&, TimeBalloonNpc*, bool, MiniGameMenu*, StageSceneStateStageMap*, StageSceneStateWarp*);
+    initTutorialFlag();
+    appear();
+    settingGetRetry();
+    control();
+    updateAchievementLayout();
+    receiveEventByString(char const*);
+    trySetCountCoinNerve(int, char const*);
+    trySetDemoNerveIfCountCoinEnd();
+    calcDistanceRank() const;
+    receiveEvent(al::EventFlowEventData const*);
+    judgeQuery(char const*) const;
+    getAccessor() const;
+    exePlay();
+    tryFirstStepDemo();
+    tryFirstStepPlay();
+    tryStartStageSceneLayout();
+    updateDemo();
+    updateDemoWithPlayer();
+    updatePlay();
+    tryRateUpBalloonAndSaveProtected();
+    updatePause();
+    exePlayFindBalloon();
+    exeDemoFindBalloonSuccess();
+    tryEndStageSceneLayout();
+    exeDemoFindBalloonFailed();
+    exeDemoFindBalloonFailedResult();
+    exeDemoSelectBalloon();
+    exeDemoFindBalloonFailedViewAroundStage();
+    exePlayPutBalloon();
+    exeDemoPutBalloonRetrySelect();
+    exeDemoShowResult();
+    exeDemo();
+    exeDemoState();
+    exeDemoShowAchievementRankUp();
+    exeDemoShowAchievementRankUpEnd();
+    exeDemoCountCoin();
+    exeDemoCountCoinEnd();
+    exePausePut();
+    exePauseFind();
+    exePauseFindEndRateUp();
+    exeOpenMap();
+    exeMiss();
+    exeWarpFindBalloon();
+    exeWarpPutBalloon();
+    isAutoStart() const;
+    isOpenMapNerve() const;
+    isMissNerve() const;
+    isDemoNerve() const;
+    isPauseNerve() const;
+    calcFindSuccsessTotalCoin();
+    ~StageSceneStateTimeBalloon();
+    isTimeBalloonNerve() const;
+    isReturnNervePlay() const;
+    isDrawForward() const;
+};

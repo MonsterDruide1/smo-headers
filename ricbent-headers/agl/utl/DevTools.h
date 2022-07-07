@@ -1,0 +1,77 @@
+#pragma once
+
+namespace agl { namespace utl { namespace DevTools {
+
+setMeterScale(float);
+getMeterScale();
+calcScale(float);
+calcMeter(float);
+getStringMinMax(float, float);
+setFrameSpeed(float);
+getFrameSpeed();
+setCameraOperationSpeed(float);
+getCameraOperationSpeed();
+genMessage(sead::hostio::Context*);
+drawCamera(agl::DrawContext*, sead::Camera const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&, float);
+drawCamera(agl::DrawContext*, sead::Matrix34<float> const&, sead::Vector3<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&, float);
+drawCamera_(agl::DrawContext*, sead::Matrix34<float> const&, sead::Vector3<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&, float);
+drawFrustum(agl::DrawContext*, sead::Camera const&, sead::Projection const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&);
+drawFrustum_(agl::DrawContext*, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&);
+drawFrustum(agl::DrawContext*, sead::Matrix34<float> const&, sead::Projection const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&);
+drawCameraAndFrustum(agl::DrawContext*, sead::Camera const&, sead::Projection const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool, sead::Color4f const&, sead::Color4f const&, float);
+beginDrawImm(agl::DrawContext*, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawLineImm(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&, float);
+setUniformToDevToolsShader_(agl::DrawContext*, sead::Matrix34<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&, sead::Color4f const&, sead::Vector3<float> const&);
+drawAxisImm(agl::DrawContext*, sead::Matrix34<float> const&, float, float, float);
+drawDirectionalLight(agl::DrawContext*, sead::Vector3<float> const&, sead::Color4f const&, sead::Color4f const&, sead::Color4f const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, float, bool);
+drawPointLight(agl::DrawContext*, sead::Vector3<float> const&, float, sead::Color4f const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawSpotLight(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&, float, float, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawProjLight(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&, float, float, float, float, float, float, sead::Vector3<float> const&, bool, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawCapsule(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, float, sead::Color4f const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, bool);
+drawArrow(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&, sead::Color4f const&, float, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawCursor(agl::DrawContext*, sead::Vector2<float> const&, sead::Vector2<float> const&, float);
+drawTexture(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&);
+drawDepthGradation(agl::DrawContext*, agl::RenderBuffer const&, unsigned int, float const*, sead::Color4f const*, float, float);
+controlCamera(sead::LookAtCamera*, sead::Controller const&, float, agl::utl::DevTools::CameraControlType);
+controlCamera(sead::LookAtCamera*, sead::Vector2<float> const&, sead::Vector2<float> const&, float, float, float, bool, agl::utl::DevTools::CameraControlType);
+controlCameraPointer(sead::LookAtCamera*, agl::utl::DevTools::PoiningControlBuffer*, sead::Viewport const&);
+controlCameraPointer(sead::LookAtCamera*, agl::utl::DevTools::PoiningControlBuffer*, float, float);
+controlCameraPointer(sead::LookAtCamera*, agl::utl::DevTools::PoiningControlBuffer*, bool, bool, bool, bool, sead::Vector2<float> const&, bool, float, float);
+controlCameraPointer(sead::LookAtCamera*, sead::Vector2<float> const&, float, float, float);
+drawFrameBuffer(agl::DrawContext*, agl::RenderBuffer const&, sead::Viewport const&, agl::utl::ImageFilter2D::Channel);
+drawVisualizedDepth(agl::DrawContext*, agl::TextureData const&, int, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawVisualizedDepth(agl::DrawContext*, agl::TextureData const&, int, sead::Matrix44<float> const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawColorQuad(agl::DrawContext*, sead::Color4f const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawColorQuadTopBottom(agl::DrawContext*, sead::Color4f const&, sead::Color4f const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawTexture_(agl::DrawContext*, agl::ShaderProgram const&, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&);
+drawTextureChannel(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, agl::utl::ImageFilter2D::Channel);
+drawTextureGamma(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, float);
+drawTextureMipLevel(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, float);
+drawTexture2DArray(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, int, float, sead::Color4f const&);
+drawTexture3D(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, float, float);
+drawTextureCubeMap(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, agl::CubeMapFace, float);
+drawTextureCubeArray(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, int, agl::CubeMapFace, float);
+drawTextureTexCoord(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Vector2<float> const&, float, sead::Vector2<float> const&);
+drawTextureTexCoordMultColor(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Vector2<float> const&, float, sead::Vector2<float> const&, sead::Color4f const&);
+drawTextureMSAA(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawNV12Decord(agl::DrawContext*, agl::TextureSampler const&, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&);
+drawTextureColorMatrix(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Matrix44<float> const&, sead::Vector4<float> const&, float);
+drawTexture_(agl::DrawContext*, agl::ShaderProgram const&, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Matrix44<float> const&, sead::Vector4<float> const&);
+drawTexture2DArrayColorMatrix(agl::DrawContext*, agl::TextureSampler const&, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Matrix44<float> const&, sead::Vector4<float> const&, int, float);
+drawPointImm(agl::DrawContext*, sead::Vector3<float> const&, sead::Color4f const&, float);
+drawTriangleImm(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&);
+drawWireTriangleImm(agl::DrawContext*, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Vector3<float> const&, sead::Color4f const&, float);
+drawGridImm(agl::DrawContext*, float, float, unsigned int, unsigned int, sead::Color4f const&, float);
+drawWireCircleImm(agl::DrawContext*, sead::Matrix34<float> const&, sead::Color4f const&, float, unsigned int);
+drawBoundBoxImm(agl::DrawContext*, sead::BoundBox3<float> const&, sead::Color4f const&, float);
+drawFan(agl::DrawContext*, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&, float, float, unsigned int, float);
+drawFan_(agl::DrawContext*, unsigned int*, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&, float, float, unsigned int, float);
+drawWireFan(agl::DrawContext*, sead::Matrix34<float> const&, sead::Matrix44<float> const&, sead::Color4f const&, float, float, unsigned int, float);
+setStickReverse(bool);
+isStickReverse();
+setRotateLRReverse(bool);
+isRotateLRReverse();
+setRotateUDReverse(bool);
+isRotateUDReverse();
+
+} } } 

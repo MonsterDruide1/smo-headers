@@ -1,0 +1,62 @@
+#pragma once
+
+class Mofumofu
+{
+public:
+    Mofumofu(char const*);
+    init(al::ActorInitInfo const&);
+    switchFunctionStartDemo();
+    makeActorAlive();
+    makeActorDead();
+    kill();
+    movement();
+    updateCollider();
+    attackSensor(al::HitSensor*, al::HitSensor*);
+    receiveMsg(al::SensorMsg const*, al::HitSensor*, al::HitSensor*);
+    isFirstDemo() const;
+    isEnableSkipDemo() const;
+    skipDemo();
+    getAttackSensorRadius() const;
+    getBodySensorRadius() const;
+    exeDemoPrepare();
+    exeDemoOpeningBefore();
+    exeDemoOpening1();
+    exeDemoOpening2();
+    exeWallMoveStart();
+    exeWallMove();
+    exeWallBrake();
+    exeWallStop();
+    exeWallShootSign();
+    exeWallSinkStart();
+    exeWallSink();
+    exeWallSinkWarpIn();
+    exeWallSinkWaitBullet();
+    exeWallSinkCloseWarpHole();
+    exeWallOutOpenWarpHole();
+    exeWallOutShoot();
+    exeWallOutWarpOut();
+    exePanicStopSlow();
+    exePanicStopStart();
+    exePanicStop();
+    exePanicWalk();
+    exePanicWalkEnd();
+    exePanicDamage();
+    exePanic();
+    exeDamageDelay();
+    exeDamage();
+    exeDamageAfter();
+    exeDashFallWarpHole();
+    exeDashOpenWarpHole();
+    exeDashSign();
+    exeDash();
+    exeDashCloseWarpHole();
+    exeDashMoveWarpHole();
+    exeWallSinkRise();
+    exeWallSinkMove();
+    exeDemoBattleEndBefore();
+    exeDemoBattleEnd();
+    exeDemoBattleEndDieSign();
+    exeDemoBattleEndDie();
+    exeDemoBattleEndDieAfter();
+    afterDemoPrepare();
+};

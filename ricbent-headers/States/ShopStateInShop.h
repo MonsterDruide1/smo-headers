@@ -1,0 +1,66 @@
+#pragma once
+
+class ShopStateInShop
+{
+public:
+    ShopStateInShop(StageSceneStateShop*, al::ActorInitInfo const&, al::DeriveActorGroup<ShoppingWatcher>*, StageSceneLayout*);
+    appear();
+    kill();
+    control();
+    exeAppear();
+    exeHello();
+    exeHelloWait();
+    isExistNewItem() const;
+    exeHelloNewItem();
+    exeHelloNewItemWait();
+    exeAppearItem();
+    exeSelect();
+    exeSelectDecideEnd();
+    exeLackMoney();
+    exeLackMoonForSecret();
+    exeCheckBuyExplain();
+    exeCheckBuy();
+    isEnableButShine10() const;
+    exeCheckBuyEndWait();
+    exeCheckBuyCancel();
+    getSelectPartsActor() const;
+    exeBuy();
+    exeBuyWait();
+    prepareChangeWear();
+    exeBuyShine();
+    exeBuyShine10();
+    exeBuyLifeMaxUpItem();
+    exeBuyAlready();
+    exeWearOrSendHome();
+    exeWear();
+    exeWearWait();
+    exePreSelect();
+    exeSendHome();
+    commonNerveSend(char const*);
+    exeSendCloset();
+    killLayout();
+    exeThankYou();
+    exeThankYouWait();
+    exeEnd();
+    exeEndShop();
+    exeEndWear();
+    exeEndLayout();
+    requestShineGet();
+    requestEndLayout();
+    isEnd() const;
+    isEndWear() const;
+    isEndShopLayout() const;
+    isEndShopLayoutFirstStep() const;
+    isEndShop() const;
+    isEndLayout() const;
+    isBuyShine() const;
+    isBuyShine10() const;
+    isBuyLifeMaxUpItem() const;
+    setWomanExplainFlag(bool);
+    getItemNum() const;
+    setCameraPose();
+    startCameraInShop();
+    endCameraInShop();
+    requestEndDoshiCamera();
+    ~ShopStateInShop();
+};

@@ -1,0 +1,105 @@
+#pragma once
+
+namespace nn { namespace nex { 
+
+class AccountManagementProtocolClient
+{
+public:
+    CallDisableAccount(nn::nex::ProtocolCallContext*, nn::nex::qResult*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    CallDeleteAccount(nn::nex::ProtocolCallContext*, unsigned long const&);
+    CallDisconnectPrincipal(nn::nex::ProtocolCallContext*, bool*, unsigned long const&);
+    CallDisconnectAllPrincipals(nn::nex::ProtocolCallContext*, bool*);
+    CallTestCapability(nn::nex::ProtocolCallContext*, bool*, unsigned int const&);
+    CallUpdateAccountName(nn::nex::ProtocolCallContext*, nn::nex::qResult*, nn::nex::String const&);
+    CallUpdateAccountEmail(nn::nex::ProtocolCallContext*, nn::nex::qResult*, nn::nex::String const&);
+    CallUpdateCustomData(nn::nex::ProtocolCallContext*, nn::nex::qResult*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    CallGetName(nn::nex::ProtocolCallContext*, unsigned long const&, nn::nex::String*);
+    CallGetAccountData(nn::nex::ProtocolCallContext*, nn::nex::qResult*, nn::nex::AccountData*);
+    CallGetPublicData(nn::nex::ProtocolCallContext*, bool*, unsigned long const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    CallGetMultiplePublicData(nn::nex::ProtocolCallContext*, bool*, nn::nex::qList<unsigned long> const&, nn::nex::qList<nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> >*);
+    CallGetPrivateData(nn::nex::ProtocolCallContext*, bool*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    CallRetrieveAccount(nn::nex::ProtocolCallContext*, nn::nex::AccountData*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    CallFindByNameRegex(nn::nex::ProtocolCallContext*, unsigned int const&, nn::nex::String const&, nn::nex::ResultRange const&, nn::nex::qList<nn::nex::BasicAccountInfo>*);
+    CallFindByNameLike(nn::nex::ProtocolCallContext*, unsigned int const&, nn::nex::String const&, nn::nex::ResultRange const&, nn::nex::qList<nn::nex::BasicAccountInfo>*);
+    CallUpdateAccountExpiryDate(nn::nex::ProtocolCallContext*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    CallUpdateAccountEffectiveDate(nn::nex::ProtocolCallContext*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    CallUpdateStatus(nn::nex::ProtocolCallContext*, nn::nex::String const&);
+    CallGetStatus(nn::nex::ProtocolCallContext*, unsigned long const&, nn::nex::String*);
+    CallGetLastConnectionStats(nn::nex::ProtocolCallContext*, unsigned long const&, nn::nex::DateTime*, nn::nex::DateTime*, nn::nex::DateTime*);
+    CallResetPassword(nn::nex::ProtocolCallContext*, bool*);
+    AccountManagementProtocolClient(unsigned short);
+    CreateAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&);
+    ProtoReturn_CreateAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    DeleteAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&);
+    ProtoReturn_DeleteAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    DisableAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    ProtoReturn_DisableAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    ChangePassword_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, nn::nex::String const&);
+    ProtoReturn_ChangePassword(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    TestCapability_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, unsigned int const&);
+    ProtoReturn_TestCapability(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetName_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&, nn::nex::String*);
+    ProtoReturn_GetName(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetAccountData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, nn::nex::AccountData*);
+    ProtoReturn_GetAccountData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetPrivateData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    ProtoReturn_GetPrivateData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetPublicData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, unsigned long const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    ProtoReturn_GetPublicData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetMultiplePublicData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, nn::nex::qList<unsigned long> const&, nn::nex::qList<nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> >*);
+    ProtoReturn_GetMultiplePublicData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateAccountName_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, nn::nex::String const&);
+    ProtoReturn_UpdateAccountName(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateAccountEmail_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, nn::nex::String const&);
+    ProtoReturn_UpdateAccountEmail(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateCustomData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::qResult*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    ProtoReturn_UpdateCustomData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    FindByNameRegex_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned int const&, nn::nex::String const&, nn::nex::ResultRange const&, nn::nex::qList<nn::nex::BasicAccountInfo>*);
+    ProtoReturn_FindByNameRegex(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateAccountExpiryDate_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    ProtoReturn_UpdateAccountExpiryDate(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateAccountEffectiveDate_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&, nn::nex::DateTime const&, nn::nex::String const&);
+    ProtoReturn_UpdateAccountEffectiveDate(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateStatus_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&);
+    ProtoReturn_UpdateStatus(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetStatus_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&, nn::nex::String*);
+    ProtoReturn_GetStatus(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    GetLastConnectionStats_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned long const&, nn::nex::DateTime*, nn::nex::DateTime*, nn::nex::DateTime*);
+    ProtoReturn_GetLastConnectionStats(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    ResetPassword_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*);
+    ProtoReturn_ResetPassword(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    CreateAccountWithCustomData_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    ProtoReturn_CreateAccountWithCustomData(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    RetrieveAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::AccountData*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String>*);
+    ProtoReturn_RetrieveAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    UpdateAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    ProtoReturn_UpdateAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    ChangePasswordByGuest_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, nn::nex::String const&);
+    ProtoReturn_ChangePasswordByGuest(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    FindByNameLike_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, unsigned int const&, nn::nex::String const&, nn::nex::ResultRange const&, nn::nex::qList<nn::nex::BasicAccountInfo>*);
+    ProtoReturn_FindByNameLike(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    CustomCreateAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*);
+    ProtoReturn_CustomCreateAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    NintendoCreateAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*, nn::nex::String*);
+    ProtoReturn_NintendoCreateAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    LookupOrCreateAccount_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*);
+    ProtoReturn_LookupOrCreateAccount(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    DisconnectPrincipal_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*, unsigned long const&);
+    ProtoReturn_DisconnectPrincipal(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    DisconnectAllPrincipals_PrepareRequest(nn::nex::ProtocolCallContext*, nn::nex::Message*, bool*);
+    ProtoReturn_DisconnectAllPrincipals(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    CallCreateAccount(nn::nex::ProtocolCallContext*, nn::nex::qResult*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&);
+    CallChangePassword(nn::nex::ProtocolCallContext*, bool*, nn::nex::String const&);
+    CallCreateAccountWithCustomData(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    CallUpdateAccount(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&);
+    CallChangePasswordByGuest(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, nn::nex::String const&);
+    CallCustomCreateAccount(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*);
+    CallNintendoCreateAccount(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*, nn::nex::String*);
+    CallLookupOrCreateAccount(nn::nex::ProtocolCallContext*, nn::nex::String const&, nn::nex::String const&, unsigned int const&, nn::nex::String const&, nn::nex::AnyObjectHolder<nn::nex::Data, nn::nex::String> const&, unsigned long*);
+    ExtractCallSpecificResults(nn::nex::Message*, nn::nex::ProtocolCallContext*);
+    ~AccountManagementProtocolClient();
+    CreateResponder() const;
+    s_protoReturnFunctions;
+};
+
+} } 
