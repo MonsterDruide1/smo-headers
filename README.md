@@ -12,3 +12,4 @@ Credits goes to all the various projects and users that collected and published 
 - [OdysseyHeaders](https://github.com/GRAnimated/OdysseyHeaders)
 - [Visible-HitSensors](https://github.com/Mars2032/Visible-HitSensors)
 - [Starlight-SMO-Example](https://github.com/brycewithfiveunderscores/Starlight-SMO-Example)
+- [Starlight-SMO-LayoutEditing](https://github.com/CraftyBoss/Starlight-SMO-LayoutEditing)
