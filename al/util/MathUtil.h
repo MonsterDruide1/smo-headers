@@ -36,8 +36,4 @@ void verticalizeVec(sead::Vector3f*, const sead::Vector3f&, const sead::Vector3f
 
 float modf(float, float);
 
-float calcRate01(float, float, float);
-
-float converge(float, float, float);
-
 };  // namespace al
