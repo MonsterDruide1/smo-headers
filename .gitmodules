@@ -1,0 +1,9 @@
+[submodule "sead"]
+	path = sead
+	url = https://github.com/open-ead/sead
+[submodule "NintendoSDK"]
+	path = NintendoSDK
+	url = https://github.com/open-ead/nnheaders
+[submodule "agl"]
+	path = agl
+	url = https://github.com/open-ead/agl
