@@ -2,7 +2,7 @@
 
 #include <cstddef>
 #include <cstdint>
-#include <vapours/results.hpp>
+#include "nn/result.h"
 
 using u8 = std::uint8_t;
 using u16 = std::uint16_t;
