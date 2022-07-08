@@ -10,7 +10,7 @@
 #include "al/sensor/SensorMsg.h"
 
 #include "game/Player/PlayerInput.h"
-#include "game/Interfaces/IUsePlayerCollision.h"
+#include "al/collision/PlayerCollision.h"
 
 #include "HackCapThrowParam.h"
 #include "HackCap/HackCapJointControlKeeper.h"

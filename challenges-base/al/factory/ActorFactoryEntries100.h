@@ -4,9 +4,6 @@
 
 #include "game/Actors/Shine.h"
 
-#include "actors/BlockShine.hpp"
-#include "actors/BombHei.hpp"
-
 namespace al
 {
     class AllDeadWatcher;
@@ -70,10 +67,6 @@ namespace al
 } // namespace al
 
 static al::NameToCreator<al::createActor> actorEntries[] = {
-    // CUSTOM ACTOR ENTRIES HERE
-    {"BlockShine", &ca::createCustomActor<ca::BlockShine>},
-    {"CustomTogezo", &ca::createCustomActor<ca::BombHei>},
-    // VANILLA ACTOR ENTRIES
     {"AchievementNpc", &al::createActorFunction<class AchievementNpc>},
     {"AirBubble", &al::createActorFunction<class AirBubble>},
     {"AirBubbleGenerator", &al::createActorFunction<class AirBubbleGenerator>},

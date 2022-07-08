@@ -10,8 +10,7 @@
 #include "al/util.hpp"
 #include "al/util/NerveUtil.h"
 
-#include "game/UI/MenuSelectParts.h"
-#include "logger.hpp"
+#include "al/layout/MenuSelectParts.h"
 
 class FooterParts;
 class StageSceneStateStartSeparatePlay;

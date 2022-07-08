@@ -2,7 +2,7 @@
 
 #include "types.h"
 #include "PlayerCollider.h"
-#include "game/Interfaces/IUsePlayerCollision.h"
+#include "al/collision/PlayerCollision.h"
 
 class PlayerColliderHakoniwa : public IUsePlayerCollision {
     public:

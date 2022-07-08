@@ -2,14 +2,6 @@
 
 #include "Factory.h"
 
-namespace ca {
-    template <class T>
-    al::LiveActor *createCustomActor(const char *name)
-    {
-        return new T(name);
-    };
-}
-
 namespace al
 {
 

@@ -34,7 +34,4 @@ namespace al {
 
     bool isPadHoldZL(int port);
     bool isPadHoldZR(int port);
-
-    sead::Vector2f *getLeftStick(int);
-    sead::Vector2f *getRightStick(int);
 }

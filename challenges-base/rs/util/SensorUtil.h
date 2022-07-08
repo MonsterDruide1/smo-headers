@@ -4,7 +4,7 @@
 #include "al/sensor/SensorHitGroup.h"
 
 #include "al/LiveActor/LiveActor.h" // for SensorMsg
-#include "game/Interfaces/IUsePlayerCollision.h"
+#include "al/collision/PlayerCollision.h"
 
 #include <sead/math/seadVector.h>
 

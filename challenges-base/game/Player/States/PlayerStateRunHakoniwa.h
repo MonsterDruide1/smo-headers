@@ -1,7 +1,7 @@
 #pragma once
 
 #include "al/LiveActor/LiveActor.h"
-#include "game/Interfaces/IUsePlayerCollision.h"
+#include "al/collision/PlayerCollision.h"
 #include "game/Player/Actions/PlayerActionGroundMoveControl.h"
 #include "game/Player/PlayerAnimator.h"
 #include "game/Player/PlayerConst.h"

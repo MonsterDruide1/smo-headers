@@ -3,7 +3,7 @@
 #include "sead/math/seadVector.h"
 
 #include "al/LiveActor/LiveActor.h"
-#include "game/Interfaces/IUsePlayerCollision.h"
+#include "al/collision/PlayerCollision.h"
 #include "game/Interfaces/IUsePlayerHack.h"
 
 #include "HitSensor.h"

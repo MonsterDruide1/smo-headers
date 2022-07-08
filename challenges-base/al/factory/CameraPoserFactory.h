@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Factory.h"
-#include "logger.hpp"
 
 namespace cc {
     template <class T>
@@ -30,7 +29,6 @@ namespace al {
 
             virtual const char *convertName(char const *name) const override
             {
-                gLogger->LOG("Creating Camera: %s\n", name);
                 return name;
             };
 
