@@ -12,3 +12,7 @@ set -e
 # test online-headers
 ./generate.sh online-headers/al online-headers/game online-headers/rs
 ./compile.sh -Ionline-headers -Ionline-headers/sead -Iaarch64
+
+# test practice-headers
+./generate.sh practice-headers/al practice-headers/game practice-headers/rs
+./compile.sh -Ipractice-headers -Ipractice-headers/sead -Iaarch64 -Ipractice-headers/nn
