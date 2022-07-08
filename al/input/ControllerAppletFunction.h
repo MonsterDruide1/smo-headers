@@ -1,6 +1,6 @@
 #pragma once
 
-#include "al/gamepad/util.h"
+#include "al/input/GamePadSystem.h"
 
 class ControllerAppletFunction {
 public:

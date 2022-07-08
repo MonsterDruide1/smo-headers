@@ -5,11 +5,11 @@
 
 #pragma once
 
+#include <prim/seadSafeString.h>
 #include "GameDataFile.h"
 #include "GameDataHolderBase.h"
 #include "al/message/MessageSystem.h"
-#include "game/WorldList/WorldList.h"
-#include "sead/prim/seadSafeString.h"
+#include "al/resource/WorldList.h"
 
 class GameDataHolder  // : public GameDataHolderBase
 {
@@ -82,8 +82,8 @@ public:
     void readFromSaveDataBufferCommonFileOnlyLanguage();
 
     u64* _8;
-    undefined8 padding;
-    undefined8 _padding;
+    long padding;
+    long _padding;
     GameDataFile* mDataFileArr;   // 0x18
     GameDataFile* mGameDataFile;  // 0x20
     unsigned char padding_190[0x168];

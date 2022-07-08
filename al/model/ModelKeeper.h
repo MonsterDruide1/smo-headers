@@ -11,6 +11,6 @@ public:
 
     virtual ~ModelKeeper();
 
-    void initResource()
+    void initResource();
 };
-};  // namespace al
+}  // namespace al

@@ -5,8 +5,9 @@
 
 #pragma once
 
-#include "GameProgressData.h"
-#include "types.h"
+#include <basis/seadTypes.h>
+
+class GameProgressData;
 
 class GameDataFile {
 public:
@@ -15,6 +16,6 @@ public:
 
     unsigned char padding_6A8[0x6A8];
     GameProgressData* mGameProgressData;  // 0x6A8
-    undefined padding_9F0[0x340];
+    char padding_9F0[0x340];
     int curWorldId;
 };

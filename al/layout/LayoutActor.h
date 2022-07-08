@@ -1,9 +1,9 @@
 #pragma once
 
-#include "al/audio/AudioKeeper.h"
-#include "al/camera/CameraDirector.h"
-#include "al/effect/EffectKeeper.h"
 #include "al/hio/HioNode.h"
+#include "al/iuse/IUseAudioKeeper.h"
+#include "al/iuse/IUseCamera.h"
+#include "al/iuse/IUseEffectKeeper.h"
 #include "al/layout/IUseLayout.h"
 #include "al/message/IUseMessageSystem.h"
 #include "al/nerve/Nerve.h"
