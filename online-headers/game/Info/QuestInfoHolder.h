@@ -23,6 +23,7 @@ public:
 
     virtual const char *getSceneObjName(void) override;
     virtual void initAfterPlacementSceneObj(al::ActorInitInfo const&) override;
+    virtual void initSceneObj(void) override;
     
     void validateQuest(QuestInfo const*);
     void updateActiveList(int);
