@@ -2,9 +2,6 @@
 
 #include "ActorFactory.h"
 
-#include "actors/PuppetActor.h"
-#include "actors/PuppetHackActor.h"
-
 namespace al
 {
     class AllDeadWatcher;
@@ -68,10 +65,6 @@ namespace al
 } // namespace al
 
 __attribute((used)) static al::NameToCreator<al::createActor> actorEntries[] = {
-    // CUSTOM ACTOR ENTRIES HERE
-    {"PuppetActor", &al::createCustomActor<PuppetActor>},
-    {"PuppetHackActor", &al::createCustomActor<PuppetHackActor>},
-    // VANILLA ACTOR ENTRIES
     {"AchievementNpc", &al::createActorFunction<class AchievementNpc>},
     {"AirBubble", &al::createActorFunction<class AirBubble>},
     {"AirBubbleGenerator", &al::createActorFunction<class AirBubbleGenerator>},

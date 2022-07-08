@@ -11,8 +11,7 @@
 #include "al/util.hpp"
 #include "al/util/NerveUtil.h"
 
-#include "game/UI/MenuSelectParts.h"
-#include "logger.hpp"
+#include "al/layout/MenuSelectParts.h"
 
 class FooterParts;
 class StageSceneStateStartSeparatePlay;
@@ -115,8 +114,6 @@ namespace {
     NERVE_HEADER(StageSceneStatePauseMenu, Save)
     NERVE_HEADER(StageSceneStatePauseMenu, ConfirmNewGame)
     NERVE_HEADER(StageSceneStatePauseMenu, NotExistEmptyFile)
-    // custom nerves
-    NERVE_HEADER(StageSceneStatePauseMenu, ServerConfig)
 }
 
 namespace {
@@ -132,7 +129,5 @@ namespace {
     NERVE_IMPL(StageSceneStatePauseMenu, Save)
     NERVE_IMPL(StageSceneStatePauseMenu, ConfirmNewGame)
     NERVE_IMPL(StageSceneStatePauseMenu, NotExistEmptyFile)
-    // custom nerves
-    NERVE_IMPL(StageSceneStatePauseMenu, ServerConfig)
 }
 

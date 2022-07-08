@@ -1,6 +1,5 @@
 #pragma once
 
-#include "al/util/StringUtil.h"
 #include "al/actor/ActorInitInfo.h"
 
 namespace rs {

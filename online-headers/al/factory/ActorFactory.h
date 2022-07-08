@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Factory.h"
-#include "logger.hpp"
 
 namespace al {
 
