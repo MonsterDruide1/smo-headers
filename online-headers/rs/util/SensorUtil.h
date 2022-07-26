@@ -16,8 +16,6 @@ namespace rs
 void setAppearItemFactorAndOffsetByMsg(al::LiveActor const*, al::SensorMsg const*,
                                        al::HitSensor const*);
 
-bool isMsgBreakBySword(al::SensorMsg const*);
-bool isMsgStatueDrop(al::SensorMsg const*);
 bool isMsgHackerDamageAndCancel(al::SensorMsg const*);
 bool isMsgEnableMapCheckPointWarpCollidedGround(al::SensorMsg const*, al::LiveActor const*);
 bool isMsgEnableMapCheckPointWarpCollidedGround(al::SensorMsg const*, IUsePlayerCollision const*);

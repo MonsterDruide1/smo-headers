@@ -8,7 +8,6 @@ namespace alCameraPoserFunction {
 
     struct CameraCollisionHitResult;
 
-    void initCameraArrowCollider(al::CameraPoser *);
     void calcCameraPose(sead::Quat<float> *,al::CameraPoser const*);
     void calcLookDir(sead::Vector3<float> *,al::CameraPoser const*);
     void calcCameraDir(sead::Vector3<float> *,al::CameraPoser const*);

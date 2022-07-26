@@ -116,18 +116,3 @@ namespace {
     NERVE_HEADER(StageSceneStatePauseMenu, NotExistEmptyFile)
 }
 
-namespace {
-    NERVE_IMPL(StageSceneStatePauseMenu, Appear)
-    NERVE_IMPL(StageSceneStatePauseMenu, Wait)
-    NERVE_IMPL(StageSceneStatePauseMenu, FadeBeforeHelp)
-    NERVE_IMPL(StageSceneStatePauseMenu, StartHelp)
-    NERVE_IMPL(StageSceneStatePauseMenu, WaitDraw)
-    NERVE_IMPL(StageSceneStatePauseMenu, End)
-    NERVE_IMPL(StageSceneStatePauseMenu, StartSeparatePlay)
-    NERVE_IMPL(StageSceneStatePauseMenu, EndSeparatePlay)
-    NERVE_IMPL(StageSceneStatePauseMenu, Option)
-    NERVE_IMPL(StageSceneStatePauseMenu, Save)
-    NERVE_IMPL(StageSceneStatePauseMenu, ConfirmNewGame)
-    NERVE_IMPL(StageSceneStatePauseMenu, NotExistEmptyFile)
-}
-

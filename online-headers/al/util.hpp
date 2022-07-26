@@ -125,8 +125,6 @@ namespace al
 
     void requestCaptureRecursive(al::LayoutActor const*);
 
-    void startAction(IUseLayoutAction*, const char *, const char *);
-
     bool isActionPlaying(al::IUseLayoutAction *, const char *action, const char *group);
 
     bool isActionEnd(al::IUseLayoutAction const*, char const*);
@@ -289,8 +287,6 @@ namespace al
     
     void addHitSensor(al::LiveActor *actor, al::ActorInitInfo const &initInfo, char const *sensorName, uint typeEnum, float radius, ushort maxCount, sead::Vector3f const& position);
 
-    bool isMsgPlayerTrampleReflect(al::SensorMsg const *);
-
     bool isSensorPlayerAttack(al::HitSensor const *targetSensor);
 
     bool sendMsgPlayerHipDropKnockDown(al::HitSensor *target, al::HitSensor *source);
@@ -409,11 +405,6 @@ namespace al
 
     void hideSilhouetteModelIfShow(al::LiveActor *);
 
-    bool isExistDitherAnimator(const al::LiveActor *);
-
-    void validateDitherAnim(al::LiveActor *);
-    void invalidateDitherAnim(al::LiveActor *);
-
     bool isHideModel(const al::LiveActor *);
 
     bool isDead(const al::LiveActor *);
@@ -436,10 +427,6 @@ namespace al
     void executeDraw(al::LayoutKit const *, char const *);
 
     bool isExistFile(sead::SafeString const &filePath);
-
-    al::StageInfo *getStageInfoMap(al::Scene const*,int);
-
-    bool isVisAnimExist(const al::LiveActor *, const char *);
 
     bool isInAreaObj(al::LiveActor const *, const char *);
 
