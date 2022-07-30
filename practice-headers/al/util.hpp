@@ -12,7 +12,7 @@ namespace sead {
 class LogicalFrameBuffer;
 }
 
-#include "sead/basis/seadNew.hpp"
+#include "sead/basis/seadNew.h"
 #include "sead/gfx/seadContext.h"
 #include "sead/heap/seadHeap.h"
 #include "sead/math/seadVector.h"
