@@ -1,1 +1,0 @@
-../../../sead/include/prim/seadDelegate.h

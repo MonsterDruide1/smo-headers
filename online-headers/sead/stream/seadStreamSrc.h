@@ -1,1 +1,0 @@
-../../../sead/include/stream/seadStreamSrc.h

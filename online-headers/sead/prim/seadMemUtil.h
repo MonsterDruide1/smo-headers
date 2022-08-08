@@ -1,1 +1,0 @@
-../../../sead/include/prim/seadMemUtil.h

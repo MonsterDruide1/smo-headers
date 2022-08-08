@@ -1,1 +1,0 @@
-../../../sead/include/math/seadQuat.hpp
