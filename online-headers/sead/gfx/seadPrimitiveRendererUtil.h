@@ -1,1 +1,0 @@
-../../../sead/include/gfx/seadPrimitiveRendererUtil.h
