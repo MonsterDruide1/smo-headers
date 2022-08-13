@@ -2,12 +2,15 @@
 
 #include "al/layout/LayoutActor.h"
 #include "al/nerve/NerveExecutor.h"
-#include "nn/ui2d/Texture.h"
 #include "prim/seadSafeString.h"
 
 struct RollPartsData {
 
 };
+
+namespace nn::ui2d {
+    class TextureInfo;
+}
 
 class CommonVerticalList : public al::NerveExecutor {
 public:

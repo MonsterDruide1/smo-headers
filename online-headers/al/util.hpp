@@ -42,12 +42,14 @@ namespace al
 
 #include "agl/DrawContext.h"
 
-#include "nn/ui2d/Texture.h"
-
 #include "types.h"
 
 template<class T>
 al::LiveActor* createActorFunction(const char *name);
+
+namespace nn::ui2d {
+    class TextureInfo;
+}
 
 namespace al
 {
