@@ -1,6 +1,8 @@
 #pragma once
 
-#include <nn/g3d.h>
+namespace nn::g3d {
+    class ResFile;
+}
 
 namespace agl
 {

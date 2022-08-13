@@ -5,8 +5,12 @@
 
 #pragma once
 
-#include "sead/delegate.h"
 #include "types.h"
+
+namespace sead {
+    template<typename T>
+    class AnyDelegate1Const;
+}
 
 namespace agl
 {

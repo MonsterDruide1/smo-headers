@@ -10,7 +10,7 @@ set -e
 ./compile.sh -Ichallenges-base -Ichallenges-base/sead -Iaarch64
 
 # test online-headers
-./generate.sh online-headers/al online-headers/game online-headers/rs
+./generate.sh online-headers/agl online-headers/al online-headers/game online-headers/rs online-headers/nn
 ./compile.sh -Ionline-headers -Ionline-headers/sead -Iaarch64
 
 # test practice-headers

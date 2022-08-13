@@ -5,9 +5,15 @@
 
 #pragma once
 
-#include "sead/array.h"
-#include "sead/delegate.h"
-#include "sead/heap.h"
+namespace sead {
+    class Heap;
+
+    template<typename T>
+    class AnyDelegate1Const;
+    
+    template<typename T>
+    class ObjArray;
+}
 
 namespace agl
 {

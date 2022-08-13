@@ -5,8 +5,11 @@
 
 #pragma once
 
-#include "sead/heap.h"
 #include "types.h"
+
+namespace sead {
+    class Heap;
+}
 
 namespace agl
 {

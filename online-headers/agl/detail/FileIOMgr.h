@@ -5,10 +5,17 @@
 
 #pragma once
 
-#include "sead/heap.h"
-#include "sead/hostio.h"
-#include "sead/string.h"
-#include "sead/xml.h"
+#include <hostio/seadHostIONode.h>
+#include <prim/seadSafeString.h>
+
+namespace sead {
+    class Heap;
+    class XmlDocument;
+    
+    namespace hostio {
+        class FileInfo;
+    }
+}
 
 namespace agl
 {

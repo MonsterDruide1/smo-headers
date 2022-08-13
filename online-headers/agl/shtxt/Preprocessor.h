@@ -5,8 +5,12 @@
 
 #pragma once
 
-#include "sead/heap.h"
-#include "sead/string.h"
+#include <prim/seadSafeString.h>
+
+namespace sead {
+    class Heap;
+    class ExpHeap;
+}
 
 namespace agl
 {

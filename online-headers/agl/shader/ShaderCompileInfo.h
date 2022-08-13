@@ -5,11 +5,16 @@
 
 #pragma once
 
-#include "sead/heap.h"
-#include "sead/hostio.h"
-#include "sead/array.h"
+#include <container/seadPtrArray.h>
+#include <hostio/seadHostIONode.h>
+#include <prim/seadSafeString.h>
 #include "Shader.h"
 #include "types.h"
+
+namespace sead {
+    class Heap;
+}
+
 
 namespace agl
 {
