@@ -1,2 +1,4 @@
 all_headers.h
 test.o
+build/
+.cache/
