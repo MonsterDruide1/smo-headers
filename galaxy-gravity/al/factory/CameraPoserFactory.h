@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Factory.h"
-#include "logger.hpp"
 
 namespace cc {
     template <class T>
@@ -23,9 +22,9 @@ namespace al {
     class CameraPoserFactory : public Factory<createCameraPoser> {
         public:
             CameraPoserFactory(const char *fName) __attribute__((noinline)) {
-                this->factoryName = fName;
-                this->actorTable = nullptr;
-                this->factoryCount = 0;
+                this->mFactoryName = fName;
+                this->mFactoryEntries = nullptr;
+                this->mNumFactoryEntries = 0;
             };
 
             virtual CameraPoser *createEntranceCameraPoser(void) const;

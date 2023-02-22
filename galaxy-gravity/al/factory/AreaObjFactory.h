@@ -16,7 +16,7 @@ namespace al {
 
     class AreaObjFactory : public al::Factory<createArea> {
         public:
-            AreaObjFactory(const char* fName) {factoryName = fName;}
+            AreaObjFactory(const char* fName) {mFactoryName = fName;}
 
     };
 

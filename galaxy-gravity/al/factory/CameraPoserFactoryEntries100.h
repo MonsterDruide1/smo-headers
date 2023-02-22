@@ -30,7 +30,8 @@ namespace al {
 } // namespace al
 
 // Note: if needed, poser entries 1 and 2 can be merged together, and the second static list can be used for custom cameras
-    
+
+/*
 // 0xE in size
 static al::NameToCreator<al::createCameraPoser> poserEntries[] = {
     // Vanilla Posers
@@ -66,3 +67,4 @@ static al::NameToCreator<al::createCameraPoser> poserEntries2[] = {
     {"シナリオ紹介シンプルズームカメラ", &al::createCameraPoserFunction<ScenarioStartCameraPoserSimpleZoom>},
     {"シナリオ紹介レール移動カメラ", &al::createCameraPoserFunction<ScenarioStartCameraPoserRailMove>},
 };
+*/

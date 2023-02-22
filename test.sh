@@ -40,3 +40,7 @@ set -e
 # test starlight-layout-headers
 ./generate.sh starlight-layout/al starlight-layout/game starlight-layout/rs
 ./compile.sh -Istarlight-layout -Istarlight-layout/sead -Iaarch64 -Istarlight-layout/nn -INintendoSDK/include
+
+# test galaxy-gravity-headers
+./generate.sh galaxy-gravity/al galaxy-gravity/game galaxy-gravity/rs
+./compile.sh -Igalaxy-gravity -Igalaxy-gravity/sead -Iaarch64 -Igalaxy-gravity/nn -INintendoSDK/include

@@ -38,7 +38,7 @@ namespace alCameraPoserFunction {
     void calcTargetSpeedH(al::CameraPoser const*);
     void calcTargetJumpSpeed(al::CameraPoser const*);
     void calcTargetFallSpeed(al::CameraPoser const*);
-    void tryGetTargetRequestDistance(float *,al::CameraPoser const*);
+    bool tryGetTargetRequestDistance(float *,al::CameraPoser const*);
     void tryGetBossDistanceCurve(al::CameraPoser const*);
     void tryGetEquipmentDistanceCurve(al::CameraPoser const*);
     void tryCalcSlopeCollisionDownFrontDirH(sead::Vector3<float> *,al::CameraPoser const*);

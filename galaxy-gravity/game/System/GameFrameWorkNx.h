@@ -1,6 +1,5 @@
 #pragma once
 
-#include "al/debug/GpuPerf.h"
 #include "agl/DrawContext.h"
 #include "agl/RenderBuffer.h"
 #include "sead/framework/seadGameFramework.h"
@@ -8,6 +7,7 @@
 
 namespace al
 {
+    class GpuPerf;
     class GameFrameworkNx : public sead::GameFrameworkNx, public al::HioNode {
         public:
             unsigned char padding_198[0x198];

@@ -1,6 +1,3 @@
 #pragma once
 
-class IUsePlayerCollision {
-    public:
-        
-};
+#include "al/collision/PlayerCollision.h"

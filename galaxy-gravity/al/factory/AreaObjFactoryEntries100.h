@@ -27,7 +27,7 @@ static struct
   long a = 1;
 } _graphicsAreaUnk;
 
-
+/*
 static al::NameToCreator<al::createArea> areaEntries[] = {
     // custom area entries
     {"GravityArea", &al::createAreaObjFunction<al::AreaObj>},
@@ -159,3 +159,4 @@ static al::NameToCreator<al::createArea> areaEntries[] = {
     {"CameraStartParamAreaKids", &al::createAreaObjFunction<al::CameraStartParamAreaKids>},
     {"RecoveryTargetPosKidsArea", &al::createAreaObjFunction<class RecoveryTargetPosKidsArea>}
 };
+*/

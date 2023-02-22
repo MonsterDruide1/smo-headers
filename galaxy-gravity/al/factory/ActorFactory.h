@@ -25,9 +25,15 @@ namespace al
     public:
         ActorFactory(const char *fName)
         {
-            this->factoryName = fName;
-            this->actorTable = nullptr;
-            this->factoryCount = 0;
+            this->mFactoryName = fName;
+            this->mFactoryEntries = nullptr;
+            this->mNumFactoryEntries = 0;
         };
+    };
+    
+    class ProjectActorFactory : public al::ActorFactory
+    {
+    public:
+        ProjectActorFactory();
     };
 }

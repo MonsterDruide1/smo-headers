@@ -9,7 +9,8 @@ namespace sead
 inline ThreadLocalStorage::ThreadLocalStorage()
 {
     [[maybe_unused]] auto result = nn::os::AllocateTlsSlot(&mTlsSlot, nullptr);
-    SEAD_ASSERT(result.IsSuccess());
+    SEAD_ASSERT(result == 0);
+    //SEAD_ASSERT(result.IsSuccess());
 }
 
 inline ThreadLocalStorage::~ThreadLocalStorage()

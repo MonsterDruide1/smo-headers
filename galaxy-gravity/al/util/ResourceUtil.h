@@ -2,9 +2,10 @@
 
 #include <sead/prim/seadSafeString.h>
 #include "game/GameData/GameDataHolderAccessor.h"
-#include "al/resource/Resource.h"
 
 namespace al {
+
+class Resource;
 
 Resource* findOrCreateResource(const sead::SafeString&, const char*);
 
@@ -51,11 +52,3 @@ int getPlayerJumpCount(GameDataHolderAccessor);
 int getPlayerThrowCapCount(GameDataHolderAccessor);
 
 }  // namespace rs
-
-// FIXME this is absolutely wrong here and should be made its own class, not a namespace
-// used in resource/AchievementHolder.cpp
-namespace GameDataFunction {
-
-int getTotalShineNum(GameDataHolderAccessor, int);
-
-}

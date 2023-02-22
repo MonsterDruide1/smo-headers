@@ -68,6 +68,7 @@ namespace al
     class WobbleMapParts;
 } // namespace al
 
+/*
 static al::NameToCreator<al::createActor> actorEntries[] = {
     // CUSTOM ACTOR ENTRIES HERE
     {"SuperSpinDriver", &ca::createCustomActor<SuperSpinDriver>},
@@ -642,4 +643,6 @@ static al::NameToCreator<al::createActor> actorEntries[] = {
     {"YoshiFruitShineHolder", &al::createActorFunction<class YoshiFruitShineHolder>},
     {"Yukimaru", &al::createActorFunction<class Yukimaru>},
     {"YukimaruRacer", &al::createActorFunction<class YukimaruRacer>},
-    {"YukimaruRacerTiago", &al::createActorFunction<class YukimaruRacerTiago>}};
+    {"YukimaruRacerTiago", &al::createActorFunction<class YukimaruRacerTiago>}
+};
+*/
