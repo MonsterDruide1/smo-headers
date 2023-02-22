@@ -11,16 +11,16 @@
 #include "game/WorldList/WorldList.h"
 #include "sead/prim/seadSafeString.h"
 
-class GameDataHolder // : public GameDataHolderBase
+class GameDataHolder : public GameDataHolderBase, public al::ISceneObj, public al::HioNode, public al::IUseMessageSystem
 {
 public:
     GameDataHolder(al::MessageSystem const *);
     GameDataHolder();
 
-    //virtual ~GameDataHolder();
+    virtual ~GameDataHolder();
 
-    //virtual char* getSceneObjName() const;
-    //virtual al::MessageSystem* getMessageSystem() const;
+    virtual char* getSceneObjName() const;
+    virtual al::MessageSystem* getMessageSystem() const;
 
     void setPlayingFileId(s32 file);
     void intitalizeData();
@@ -88,4 +88,30 @@ public:
     GameDataFile* mGameDataFile; // 0x20
     unsigned char padding_190[0x168];
     WorldList *mWorldList; // 0x190
+
+    // different version:
+    // u64* _8;
+    // al::MessageSystem* mMessageSystem; // _10
+    // GameDataFile* mDataFileArr; // _18
+    // GameDataFile* _20;
+    // u64 _28;
+    // u64 _30;
+    // u64* _38; // SaveDataAccessSequence*
+    // u32 _40;
+    // u32 mRequireSaveFrame; // _44
+    // bool mIsInvalidSaveForMoonGet; // _48
+    // bool mChangeStageRelated; // _49
+    // u8 _4A;
+    // u8 _4B;
+    // u32 _4C;
+    // sead::BufferedSafeStringBase<char> mLanguage; // _50
+    // u8 _58[0x90-0x60];
+    // sead::Heap* _90;
+    // u8 _98[0xB9-0x98];
+    // u64* _B8; // TempSaveData*
+    // u8 _C0[0x1A0-0xC0];
+    // u64* _1A0; // WorldList*
+    // u8 _1A8[0x228-0x1A8];
+    // u64* _228; // UniqObjInfo*
+
 };

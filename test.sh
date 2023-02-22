@@ -28,3 +28,7 @@ set -e
 # test granimated-headers
 ./generate.sh granimated-headers/al granimated-headers/game granimated-headers/rs
 ./compile.sh -Igranimated-headers -Igranimated-headers/sead -Iaarch64 -Igranimated-headers/nn -INintendoSDK/include
+
+# test visible-hitsensors-headers
+./generate.sh visible-hitsensors/al visible-hitsensors/game visible-hitsensors/rs
+./compile.sh -Ivisible-hitsensors -Ivisible-hitsensors/sead -Iaarch64 -Ivisible-hitsensors/nn -INintendoSDK/include

@@ -25,7 +25,7 @@ Name | Path | Working | Cleaned libraries | Merged
 [smo-practice](https://github.com/fruityloops1/smo-practice)                    |practice-headers|:white_check_mark:|:x:|:x:
 [SMO-PrimitiveRenderer](https://github.com/Mars2032/SMO-PrimitiveRenderer)      |primitive-renderer|:white_check_mark:|:x:|:x:
 [OdysseyHeaders](https://github.com/GRAnimated/OdysseyHeaders)                  |granimated-headers|:white_check_mark:|:x:|:x:
-[Visible-HitSensors](https://github.com/Mars2032/Visible-HitSensors)            |visible-hitsensors|:x:|:x:|:x:
+[Visible-HitSensors](https://github.com/Mars2032/Visible-HitSensors)            |visible-hitsensors|:white_check_mark:|:x:|:x:
 [Starlight-SMO-Example](https://github.com/brycewithfiveunderscores/Starlight-SMO-Example)|starlight-example|:x:|:x:|:x:
 [Starlight-SMO-LayoutEditing](https://github.com/CraftyBoss/Starlight-SMO-LayoutEditing)|starlight-layout|:x:|:x:|:x:
 [SMO-Galaxy-Gravity](https://github.com/CraftyBoss/SMO-Galaxy-Gravity)          |galaxy-gravity|:x:|:x:|:x:

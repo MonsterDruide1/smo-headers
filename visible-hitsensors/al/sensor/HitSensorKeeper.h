@@ -4,6 +4,8 @@
 
 namespace al
 {
+    class HitSensor;
+    
     class HitSensorKeeper
     {
     public:
