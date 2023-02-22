@@ -66,6 +66,9 @@ protected:
 };
 // endregion
 
+// region Print formatters
+PrintFormatter& flush(PrintFormatter& formatter);
+
 class PrintFormatter
 {
 public:

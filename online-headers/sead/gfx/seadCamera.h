@@ -35,7 +35,7 @@ public:
 
     void doUpdateMatrix(Matrix34f* mtx) const override;
 
-// private:
+private:
     Vector3f mPos;
     Vector3f mAt;
     Vector3f mUp;
