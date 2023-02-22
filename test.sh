@@ -32,3 +32,7 @@ set -e
 # test visible-hitsensors-headers
 ./generate.sh visible-hitsensors/al visible-hitsensors/game visible-hitsensors/rs
 ./compile.sh -Ivisible-hitsensors -Ivisible-hitsensors/sead -Iaarch64 -Ivisible-hitsensors/nn -INintendoSDK/include
+
+# test starlight-example-headers
+./generate.sh starlight-example/al starlight-example/game starlight-example/rs
+./compile.sh -Istarlight-example -Istarlight-example/sead -Iaarch64 -Istarlight-example/nn -INintendoSDK/include
