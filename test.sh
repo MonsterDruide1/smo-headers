@@ -22,7 +22,7 @@ set -e
 ./compile.sh -Iodyssey-reversed -Iodyssey-reversed/sead -Iaarch64 -Iodyssey-reversed/nn -Iodyssey-reversed/al
 
 # test primitive-renderer-headers
-./generate.sh online-headers/nn primitive-renderer/al primitive-renderer/game primitive-renderer/rs
+./generate.sh primitive-renderer
 ./compile.sh -Iprimitive-renderer -Iprimitive-renderer/sead -Iaarch64 -INintendoSDK/include
 
 # test granimated-headers
