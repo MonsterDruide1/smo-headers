@@ -7,7 +7,6 @@
 
 #include "detail/Surface.h"
 #include "driver/NVNtexture.h"
-
 #include "sead/prim/seadSafeString.h"
 
 namespace agl
@@ -50,7 +49,7 @@ namespace agl
 
         u64 _0;
         u32 _8;
-        u32 C;
+        u32 _C;
         u64 _10;
         u64 _18;
         u64 _20;
