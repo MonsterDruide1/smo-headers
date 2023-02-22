@@ -2,6 +2,7 @@
 
 #include "sead/prim/seadSafeString.h"
 #include "sead/resource/seadResource.h"
+#include "sead/filedevice/seadArchiveFileDevice.h"
 
 namespace al
 {

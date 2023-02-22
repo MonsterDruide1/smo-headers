@@ -1,9 +1,9 @@
 #pragma once
 
-#include "sead/math/BoundBox.h"
+#include "sead/math/seadBoundBox.h"
 #include "sead/heap/seadHeap.h"
 #include "sead/container/seadPtrArray.h"
-#include "sead/framework/seadTaskBase.h"
+#include "sead/framework/seadCalculateTask.h"
 #include "types.h"
 #include "sead/math/seadVector.h"
 
@@ -17,9 +17,9 @@ namespace sead
     public:
 
         // todo -- do me
-        enum AddonId;
-        enum ControllerId;
-        enum DeviceId;
+        enum AddonId {};
+        enum ControllerId {};
+        enum DeviceId {};
     };
 
     class ControllerBase

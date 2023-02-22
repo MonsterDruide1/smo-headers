@@ -1,8 +1,12 @@
 #pragma once
 
-#include "al/LiveActor.h"
+#include "al/LiveActor/LiveActor.h"
 #include "PlayerActorBase.h"
 #include "PlayerInitInfo.h"
+
+namespace al {
+    class SensorMsg;
+}
 
 class PlayerActorBase : public al::LiveActor
 {

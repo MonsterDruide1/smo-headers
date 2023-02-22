@@ -1,7 +1,7 @@
 #pragma once
 
 #include "nn/g3d.h"
-#include "sead/filedevice/seadFileDevice.h"
+#include "sead/filedevice/seadArchiveFileDevice.h"
 #include "sead/resource/seadResource.h"
 #include "sead/prim/seadSafeString.hpp"
 

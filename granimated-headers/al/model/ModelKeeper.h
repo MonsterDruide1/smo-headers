@@ -13,6 +13,6 @@ namespace al
 
         virtual ~ModelKeeper();
 
-        void initResource()
+        void initResource();
     };
 };

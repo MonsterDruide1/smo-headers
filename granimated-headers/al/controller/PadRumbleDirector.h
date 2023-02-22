@@ -7,7 +7,7 @@
 
 #include "types.h"
 #include "PadRumbleParam.h"
-#include "sead/vector.h"
+#include "sead/math/seadVector.h"
 
 namespace al
 {

@@ -22,6 +22,8 @@ namespace sead
 
         static const T cNullChar;
         static const int cMaximumLength = 0x80000;
+        
+        bool isEqual(const SafeStringBase<T>& str) const;
 
     protected:
         const T* mTop; // _8
@@ -82,6 +84,7 @@ namespace sead
         {
             this->copy(rStr);
         }
+        FixedSafeStringBase();// : BufferedSafeStringBase<T>(mBuffer, L) { this->clear(); }
 
         T mStrBuffer[Len]; // _18
     };
@@ -91,7 +94,10 @@ namespace sead
     {
     public:
         FixedSafeString(const SafeStringBase<char> &rStr) : FixedSafeStringBase<char, Len>(rStr) { }
+        FixedSafeString() : FixedSafeStringBase<char, Len>() {}
 
         virtual ~FixedSafeString();
     };
+typedef SafeStringBase<char> SafeString;
+typedef BufferedSafeStringBase<char> BufferedSafeString;
 };

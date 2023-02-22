@@ -33,7 +33,7 @@ namespace al
             Request_RemoveFromMovement = 0x1,
             Request_Draw = 0x2,
             Request_RemoveFromDraw = 0x3
-        }
+        };
 
         void executeRequestActorMovementAllOn();
         void executeRequestActorMovementAllOff();
@@ -42,4 +42,3 @@ namespace al
         void request(al::LiveActor *, ExecuteRequestKeeper::Request);
     };
 }
-};
