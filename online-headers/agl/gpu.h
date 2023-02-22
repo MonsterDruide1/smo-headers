@@ -8,8 +8,8 @@
 #include "types.h"
 #include "agl/detail/MemoryPool.h"
 #include "agl/detail/MemoryPoolHeap.h"
-#include "nn/gfx/api.h"
-#include "nn/gfx/memory.h"
+#include "nn/gfx/gfx_VariationBase.h"
+#include "nn/gfx/gfx_MemoryPool.h"
 #include "sead/heap/seadHeap.h"
 
 namespace agl
