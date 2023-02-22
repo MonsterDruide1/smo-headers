@@ -9,6 +9,7 @@
 #include "RenderTargetDepth.h"
 
 #include "sead/gfx/seadFrameBuffer.h"
+#include "DrawContext.h"
 
 namespace agl
 {

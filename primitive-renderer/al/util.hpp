@@ -35,9 +35,14 @@ namespace sead {
 
 #include "agl/DrawContext.h"
 
-#include "nn/ui2d/Texture.h"
-
 #include "types.h"
+
+namespace nn {
+    namespace ui2d {
+        class TextureData;
+        class TextureInfo;
+    }
+}
 
 template<class T>
 al::LiveActor* createActorFunction(const char *name);
