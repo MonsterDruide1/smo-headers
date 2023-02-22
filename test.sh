@@ -16,3 +16,7 @@ set -e
 # test practice-headers
 ./generate.sh practice-headers/al practice-headers/game practice-headers/rs
 ./compile.sh -Ipractice-headers -Ipractice-headers/sead -Iaarch64 -Ipractice-headers/nn
+
+# test odyssey-reversed-headers
+./generate.sh odyssey-reversed/al odyssey-reversed/game odyssey-reversed/rs
+./compile.sh -Iodyssey-reversed -Iodyssey-reversed/sead -Iaarch64 -Iodyssey-reversed/nn -Iodyssey-reversed/al

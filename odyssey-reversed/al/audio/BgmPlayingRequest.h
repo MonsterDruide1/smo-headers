@@ -11,7 +11,7 @@ namespace al
 {
     struct BgmPlayingRequest
     {
-        char* _0;
+        char* bgmName; // _0
         char* _8;
         char* _10;
         u32 _18;

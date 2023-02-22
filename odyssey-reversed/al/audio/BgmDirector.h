@@ -11,6 +11,8 @@ namespace al
 {
     class AudioDirector;
     class AudioSystemInfo;
+    struct BgmDirectorInitInfo;
+    struct BgmPlayingRequest;
 
     class BgmDirector
     {
@@ -64,17 +66,5 @@ namespace al
         u8 _2;
         u8 _3;
         u64 _8;
-    };
-
-    struct BgmPlayingRequest
-    {
-        char* bgmName; // _0
-        u64 _8;
-        u64 _10;
-        s32 _18;
-        s32 _1C;
-        s32 _20;
-        u64 _24;
-        u32 _2C;
     };
 };

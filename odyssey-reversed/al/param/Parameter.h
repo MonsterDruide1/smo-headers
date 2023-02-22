@@ -9,6 +9,7 @@
 
 namespace al
 {
+    template<typename T>
     class ParameterBase
     {
     public:
@@ -18,13 +19,13 @@ namespace al
         virtual T* ptr() const = 0;
         virtual void afterGetParam();
         virtual s64 size() const = 0;
-        virtual bool isEqual(al::ParameterBase const &);
-        virtual bool copy(al::ParameterBase const &);
-        virtual bool copyLerp(al::ParameterBase const &, al::ParameterBase const &, f32);
+        virtual bool isEqual(al::ParameterBase<T> const &);
+        virtual bool copy(al::ParameterBase<T> const &);
+        virtual bool copyLerp(al::ParameterBase<T> const &, al::ParameterBase<T> const &, f32);
     };
 
     template<typename T>
-    class Parameter : public ParameterBase
+    class Parameter : public ParameterBase<T>
     {
     public:
         virtual u64* getParamTypeStr() const;

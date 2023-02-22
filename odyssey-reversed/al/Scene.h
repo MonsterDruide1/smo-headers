@@ -25,14 +25,7 @@ namespace al
     class ScreenCoverCtrl;
     class SceneStopCtrl;
 
-    class ISceneObj
-    {
-    public:
-        virtual ~ISceneObj();
-        virtual char* getSceneObjName() const;
-        virtual void initAfterPlacementSceneObj(al::ActorInitInfo const &);
-        virtual void initSceneObj();
-    };
+    class ISceneObj;
 
     class SceneObjHolder
     {

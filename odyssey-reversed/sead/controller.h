@@ -23,9 +23,9 @@ namespace sead
     public:
 
         // todo -- do me
-        enum AddonId;
-        enum ControllerId;
-        enum DeviceId;
+        enum AddonId {};
+        enum ControllerId {};
+        enum DeviceId {};
     };
 
     class ControllerBase
