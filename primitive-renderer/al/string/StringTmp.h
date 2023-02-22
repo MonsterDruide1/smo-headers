@@ -1,5 +1,7 @@
 #pragma once
 
+#include <prim/seadSafeString.h>
+
 namespace al {
     
     template<int T>

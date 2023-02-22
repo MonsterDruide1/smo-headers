@@ -1,7 +1,3 @@
 #pragma once
 
-namespace al {
-    class IUseMessageSystem {
-
-    };
-}
+#include "al/layout/LayoutActor.h"

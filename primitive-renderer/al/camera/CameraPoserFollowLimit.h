@@ -18,6 +18,7 @@ namespace al {
 }
 class CameraAngleVerticalCtrl;
 
+typedef unsigned long __int64;
 typedef unsigned char _BYTE;
 typedef __int64 _QWORD;
 typedef int _DWORD;

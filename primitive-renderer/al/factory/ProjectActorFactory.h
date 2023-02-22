@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ActorFactory.h"
+#include "al/actor/Factory.h"
 #include "ActorFactoryEntries100.h"
 
 class ProjectActorFactory : public al::ActorFactory {

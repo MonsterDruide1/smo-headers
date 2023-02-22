@@ -2,6 +2,7 @@
 
 #ifdef NNSDK
 #include <nn/os.h>
+#include <nn/os.hpp>
 #endif
 
 namespace sead

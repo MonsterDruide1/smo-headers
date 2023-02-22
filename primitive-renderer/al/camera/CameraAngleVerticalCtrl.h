@@ -1,6 +1,7 @@
 #pragma once
 
 typedef unsigned char _BYTE;
+typedef unsigned long __int64;
 
 class CameraAngleVerticalInfo {
     public:

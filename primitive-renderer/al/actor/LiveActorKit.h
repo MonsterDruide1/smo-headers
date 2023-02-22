@@ -1,9 +1,3 @@
 #pragma once
 
-namespace al
-{
-    class LiveActorKit {
-        public:
-            
-    };
-} // namespace al
+#include "al/LiveActor/LiveActorKit.h"

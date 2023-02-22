@@ -23,7 +23,7 @@ Name | Path | Working | Cleaned libraries | Merged
 [SMO-Challenges-Base](https://github.com/CraftyBoss/SMO-Challenges-Base)        |challenges-base|:white_check_mark:|:x:|:x:
 [OdysseyReversed](https://github.com/shibbo/OdysseyReversed)                    |odyssey-reversed|:white_check_mark:|:x:|:x:
 [smo-practice](https://github.com/fruityloops1/smo-practice)                    |practice-headers|:white_check_mark:|:x:|:x:
-[SMO-PrimitiveRenderer](https://github.com/Mars2032/SMO-PrimitiveRenderer)      |primitive-renderer|:x:|:x:|:x:
+[SMO-PrimitiveRenderer](https://github.com/Mars2032/SMO-PrimitiveRenderer)      |primitive-renderer|:white_check_mark:|:x:|:x:
 [OdysseyHeaders](https://github.com/GRAnimated/OdysseyHeaders)                  |granimated-headers|:x:|:x:|:x:
 [Visible-HitSensors](https://github.com/Mars2032/Visible-HitSensors)            |visible-hitsensors|:x:|:x:|:x:
 [Starlight-SMO-Example](https://github.com/brycewithfiveunderscores/Starlight-SMO-Example)|starlight-example|:x:|:x:|:x:

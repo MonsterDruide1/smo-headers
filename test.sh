@@ -20,3 +20,7 @@ set -e
 # test odyssey-reversed-headers
 ./generate.sh odyssey-reversed/al odyssey-reversed/game odyssey-reversed/rs
 ./compile.sh -Iodyssey-reversed -Iodyssey-reversed/sead -Iaarch64 -Iodyssey-reversed/nn -Iodyssey-reversed/al
+
+# test primitive-renderer-headers
+./generate.sh primitive-renderer/al primitive-renderer/game primitive-renderer/rs
+./compile.sh -Iprimitive-renderer -Iprimitive-renderer/sead -Iaarch64 -Iprimitive-renderer/nn
