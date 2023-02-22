@@ -36,3 +36,7 @@ set -e
 # test starlight-example-headers
 ./generate.sh starlight-example/al starlight-example/game starlight-example/rs
 ./compile.sh -Istarlight-example -Istarlight-example/sead -Iaarch64 -Istarlight-example/nn -INintendoSDK/include
+
+# test starlight-layout-headers
+./generate.sh starlight-layout/al starlight-layout/game starlight-layout/rs
+./compile.sh -Istarlight-layout -Istarlight-layout/sead -Iaarch64 -Istarlight-layout/nn -INintendoSDK/include

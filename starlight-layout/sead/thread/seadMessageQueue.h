@@ -1,6 +1,7 @@
 #pragma once
 
 #include "nn/os.h"
+#include "nn/os.hpp"
 
 namespace sead
 {
