@@ -23,8 +23,7 @@ set -e
 
 # test primitive-renderer-headers
 ./generate.sh online-headers/nn primitive-renderer/al primitive-renderer/game primitive-renderer/rs
-#./compile.sh -Iprimitive-renderer -Iprimitive-renderer/sead -Iaarch64 -INintendoSDK/include
-./compile.sh -Iprimitive-renderer -Ionline-headers -Ionline-headers/sead -Iaarch64
+./compile.sh -Iprimitive-renderer -Iprimitive-renderer/sead -Iaarch64 -INintendoSDK/include
 
 # test granimated-headers
 ./generate.sh granimated-headers/al granimated-headers/game granimated-headers/rs
