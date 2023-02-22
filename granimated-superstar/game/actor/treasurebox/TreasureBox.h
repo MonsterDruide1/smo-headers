@@ -7,7 +7,7 @@
 
 #include "game/actor/shine/Shine.h"
 #include "al/LiveActor.h"
-#include "../item.h"
+#include "../../item.h"
 
 class TreasureBox : public al::LiveActor
 {

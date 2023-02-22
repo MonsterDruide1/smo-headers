@@ -10,7 +10,7 @@
 
 class PlayerActorBase : public al::LiveActor
 {
-pubic:
+public:
     PlayerActorBase(char const *);
 
     virtual void init(al::ActorInitInfo const &);
@@ -32,7 +32,7 @@ pubic:
     virtual void startDemoMainShineGet();
     virtual void endDemoMainShineGet();
     virtual void startDemoHack();
-    virtual void endDemoHack();PlayerInitInfo
+    virtual void endDemoHack(); // PlayerInitInfo
     virtual void startDemoKeepBind();
     virtual void noticeDemoKeepBindExecute();
     virtual void endDemoKeepBind();

@@ -8,7 +8,7 @@
 #include "al/sensor/HitSensor.h"
 #include "PlayerActorBase.h"
 #include "PlayerConst.h"
-#include "PlayerOxygen.h'"
+#include "PlayerOxygen.h"
 
 class PlayerActorHakoniwa : public PlayerActorBase
 {
@@ -37,7 +37,7 @@ public:
     virtual void startDemoMainShineGet();
     virtual void endDemoMainShineGet();
     virtual void startDemoHack();
-    virtual void endDemoHack();PlayerInitInfo
+    virtual void endDemoHack(); // PlayerInitInfo
     virtual void startDemoKeepBind();
     virtual void noticeDemoKeepBindExecute();
     virtual void endDemoKeepBind();

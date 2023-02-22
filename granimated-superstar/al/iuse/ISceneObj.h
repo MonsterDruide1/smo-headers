@@ -12,8 +12,8 @@ namespace al
     class ISceneObj
     {
     public:
-        virtual char* getSceneObjName() const;
         virtual ~ISceneObj();
+        virtual char* getSceneObjName() const;
         virtual void initAfterPlacementSceneObj(al::ActorInitInfo const &);
         virtual void initSceneObj();
     };

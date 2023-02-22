@@ -44,3 +44,7 @@ set -e
 # test galaxy-gravity-headers
 ./generate.sh galaxy-gravity/al galaxy-gravity/game galaxy-gravity/rs
 ./compile.sh -Igalaxy-gravity -Igalaxy-gravity/sead -Iaarch64 -Igalaxy-gravity/nn -INintendoSDK/include
+
+# test granimated-superstar-headers
+./generate.sh granimated-superstar/al granimated-superstar/game granimated-superstar/rs
+./compile.sh -Igranimated-superstar -Igranimated-superstar/sead -Iaarch64 -Igranimated-superstar/nn -INintendoSDK/include

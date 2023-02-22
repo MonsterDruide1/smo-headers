@@ -6,6 +6,7 @@ namespace nn
 {
     namespace g3d
     {
+        class BindFuncTable;
         class ResLightAnim
         {
         public:
