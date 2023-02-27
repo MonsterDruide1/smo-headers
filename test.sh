@@ -11,7 +11,7 @@ set -e
 
 # test online-headers
 ./generate.sh online-headers
-./compile.sh -Ionline-headers -Ionline-headers/sead -Iaarch64
+./compile.sh -Ionline-headers -Ionline-headers/sead -Iaarch64 -INintendoSDK/include
 
 # test practice-headers
 ./generate.sh practice-headers/al practice-headers/game practice-headers/rs
