@@ -7,7 +7,7 @@ set -e
 
 # test challenges-base-headers
 ./generate.sh challenges-base/al challenges-base/game challenges-base/rs
-./compile.sh -Ichallenges-base -Ichallenges-base/sead -Iaarch64
+./compile.sh -Ichallenges-base -Ichallenges-base/sead -Iaarch64 -INintendoSDK/include
 
 # test online-headers
 ./generate.sh online-headers

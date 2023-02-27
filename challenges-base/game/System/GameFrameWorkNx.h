@@ -1,9 +1,9 @@
 #pragma once
 
 #include "al/debug/GpuPerf.h"
-#include "agl/DrawContext.h"
-#include "agl/RenderBuffer.h"
-#include "sead/framework/seadGameFramework.h"
+#include "agl/common/aglDrawContext.h"
+#include "agl/common/aglRenderBuffer.h"
+#include "sead/framework/seadGameFrameworkNx.h"
 #include "al/hio/HioNode.h"
 
 namespace al

@@ -2,8 +2,11 @@
 
 #include "al/layout/LayoutActor.h"
 #include "al/nerve/NerveExecutor.h"
-#include "nn/ui2d/Texture.h"
 #include "prim/seadSafeString.h"
+
+namespace nn::ui2d {
+    class Texture;
+}
 
 struct RollPartsData {
 
