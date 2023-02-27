@@ -2,8 +2,6 @@
 
 #include "ActorFactory.h"
 
-#include "actors/SuperSpinDriver.h"
-#include "actors/FlipPanel.h"
 #include "game/Actors/Shine.h"
 
 namespace al
