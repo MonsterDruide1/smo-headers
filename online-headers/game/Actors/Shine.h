@@ -2,7 +2,7 @@
 
 #include "al/actor/ActorDimensionKeeper.h"
 #include "game/Info/QuestInfo.h"
-#include "types.h"
+#include <basis/seadTypes.h>
 
 #include "game/Info/ShineInfo.h"
 #include "game/Interfaces/IUseDimension.h"

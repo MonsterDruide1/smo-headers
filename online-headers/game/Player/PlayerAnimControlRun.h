@@ -24,6 +24,6 @@ class PlayerAnimControlRun {
         float unk2; // 0x24
         int unk3; // 0x28
         bool isMoveNormal; // 0x30 inverse of isMoon arg 
-        undefined8 unk; // 0x32(?)
+        void* unk; // 0x32(?)
         char *animName; // 0x38
 };

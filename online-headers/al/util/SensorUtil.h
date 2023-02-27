@@ -20,8 +20,6 @@ struct CapTargetInfo;
 struct GotogotonMark;
 struct FishingFish;
 
-typedef unsigned int uint;
-
 namespace al
 {
 
@@ -324,7 +322,7 @@ namespace al
     bool sendMsgPlayerItemGet(al::HitSensor *, al::HitSensor *);
     bool sendMsgPlayerPutOnEquipment(al::HitSensor *, al::HitSensor *);
     bool sendMsgPlayerReleaseEquipment(al::HitSensor *, al::HitSensor *);
-    bool sendMsgPlayerReleaseEquipmentGoal(al::HitSensor *, al::HitSensor *, uint);
+    bool sendMsgPlayerReleaseEquipmentGoal(al::HitSensor *, al::HitSensor *, u32);
     bool sendMsgPlayerFloorTouch(al::HitSensor *, al::HitSensor *);
     bool sendMsgPlayerDamageTouch(al::HitSensor *, al::HitSensor *);
     bool sendMsgPlayerCarryFront(al::HitSensor *, al::HitSensor *);
@@ -394,7 +392,7 @@ namespace al
     bool sendMsgGoalKill(al::HitSensor *, al::HitSensor *);
     bool sendMsgGoal(al::HitSensor *, al::HitSensor *);
     bool sendMsgBindStart(al::HitSensor *, al::HitSensor *);
-    bool sendMsgBindInit(al::HitSensor *, al::HitSensor *, uint);
+    bool sendMsgBindInit(al::HitSensor *, al::HitSensor *, u32);
     bool sendMsgBindEnd(al::HitSensor *, al::HitSensor *);
     bool sendMsgBindCancel(al::HitSensor *, al::HitSensor *);
     bool sendMsgBindCancelByDemo(al::HitSensor *, al::HitSensor *);

@@ -6,7 +6,7 @@
 #pragma once
 
 #include "al/scene/SceneObjHolder.h"
-#include "types.h"
+#include <basis/seadTypes.h>
 #include "UniqueObjInfo.h"
 
 #include "sead/math/seadVector.h"
@@ -26,7 +26,7 @@ class GameDataFile
     public:
         GameDataFile(GameDataHolder *);
         void initializeData(void);
-        void tryReadByamlData(uchar const*);
+        void tryReadByamlData(u8 const*);
         void tryFindCoinCollectInfo(char const*,char const*);
         void tryFindShineIndexByUniqueId(int);
         void tryFindCoinCollectIndexByUniqueId(int);
@@ -83,14 +83,14 @@ class GameDataFile
         void talkLocalLanguage(void);
         void saveWorldTravelingStatus(char const*);
         void startWorldTravelingPeach(void);
-        void setGrowFlowerTime(al::PlacementId const*,ulong);
-        void addGrowFlowerGrowLevel(al::PlacementId const*,uint);
+        void setGrowFlowerTime(al::PlacementId const*,u64);
+        void addGrowFlowerGrowLevel(al::PlacementId const*,u32);
         void findGrowFlowerPotIdFromSeedId(al::PlacementId const*);
         void addCoin(int);
         void addPlayerJumpCount(void);
         void addPlayerThrowCapCount(void);
-        void readFromStream(sead::ReadStream *,uchar *);
-        void tryReadByamlDataFromStream(sead::ReadStream *,uchar *,int);
+        void readFromStream(sead::ReadStream *,u8 *);
+        void tryReadByamlDataFromStream(sead::ReadStream *,u8 *,int);
         void writeToStream(sead::WriteStream *,sead::Heap *);
         void tryWriteByByaml(sead::WriteStream *,sead::Heap *);
         void calcCheckpointIndexInScenario(int);
@@ -234,7 +234,7 @@ class GameDataFile
         void setFlagOnTalkMessageInfo(int);
         void setJangoTrans(sead::Vector3f const&);
         void setJumpingRopeBestCount(int);
-        void setGrowFlowerTime(al::PlacementId const*,al::PlacementId const*,ulong);
+        void setGrowFlowerTime(al::PlacementId const*,al::PlacementId const*,u64);
         void setSaveObjS32(al::PlacementId const*,int);
         void setStartedObj(al::PlacementId const*);
         void setGotShine(ShineInfo const*);
@@ -296,7 +296,7 @@ class GameDataFile
         bool isEmpty(void) const;
         bool isKidsMode(void) const;
         
-        undefined padding[0x5C8];
+        u8 padding[0x5C8];
         UniqObjInfo** mUniqueInfo;  // 0x5C8
         void *unkPtr1; // 0x5D0
         void *unkPtr2; // 0x5D8

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 #include "sead/prim/seadSafeString.hpp"
 #include "FunctorBase.h"
 #include "sead/thread/seadDelegateThread.h"

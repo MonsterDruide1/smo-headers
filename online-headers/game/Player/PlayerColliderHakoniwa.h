@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 #include "PlayerCollider.h"
 #include "game/Interfaces/IUsePlayerCollision.h"
 

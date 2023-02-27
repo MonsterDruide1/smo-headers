@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 
 #include "al/scene/Scene.h"
 #include "al/audio/AudioDirector.h"
@@ -97,5 +97,5 @@ class HakoniwaSequence : public al::Sequence {
         // undefined padding_0x144[0x144];
         // undefined * field_0x2b8;
         // undefined padding_0x160[0x160];
-        // undefined8 field_0x360;
+        // void* field_0x360;
 };

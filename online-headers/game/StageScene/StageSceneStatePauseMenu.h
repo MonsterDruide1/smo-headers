@@ -97,7 +97,7 @@ class StageSceneStatePauseMenu : public al::HostStateBase<al::Scene> {
         StageSceneLayout *mStageSceneLyt;
         int field_0xd8;
         int field_0xdc;
-        ulong field_0xe0;
+        u64 field_0xe0;
         void *field_0xe8;
 };
 

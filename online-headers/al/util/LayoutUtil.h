@@ -4,8 +4,6 @@
 #include "al/layout/LayoutActor.h"
 #include "al/layout/LayoutInitInfo.h"
 
-typedef unsigned short int ushort;
-
 namespace nn::ui2d {
 class TextureInfo;
 }
@@ -41,7 +39,7 @@ namespace al
 
     void initLayoutActor(LayoutActor*, LayoutInitInfo const&, char const*, char const*);
     void setActionFrameRate(IUseLayoutAction *,float,char const*);
-    void setPaneString(IUseLayout *layout, char const *paneName, char16_t const *paneValue, ushort);
+    void setPaneString(IUseLayout *layout, char const *paneName, char16_t const *paneValue, u16);
     void setPaneStringFormat(IUseLayout* layout, char const* paneName, char const* format, ...);
     void setPaneTexture(IUseLayout*, char const*, nn::ui2d::TextureInfo const*);
     void calcLayoutPosFromWorldPos(sead::Vector2f*, const al::IUseCamera*, const sead::Vector3f &);

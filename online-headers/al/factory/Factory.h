@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 #include "al/util.hpp"
 
 namespace al

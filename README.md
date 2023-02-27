@@ -19,7 +19,7 @@ As multiple different versions of the headers got created and evolved differentl
 Name | Path | Working | Cleaned libraries | Merged
 -----|------|---------|-------------------|--------
 [OdysseyDecomp](https://github.com/MonsterDruide1/OdysseyDecomp)                |/|:white_check_mark:|:white_check_mark:|:white_check_mark:
-[SuperMarioOdysseyOnline](https://github.com/CraftyBoss/SuperMarioOdysseyOnline)|online-headers|:white_check_mark:|:x:|:x:
+[SuperMarioOdysseyOnline](https://github.com/CraftyBoss/SuperMarioOdysseyOnline)|online-headers|:white_check_mark:|:white_check_mark:|:x:
 [SMO-Challenges-Base](https://github.com/CraftyBoss/SMO-Challenges-Base)        |challenges-base|:white_check_mark:|:x:|:x:
 [OdysseyReversed](https://github.com/shibbo/OdysseyReversed)                    |odyssey-reversed|:white_check_mark:|:x:|:x:
 [smo-practice](https://github.com/fruityloops1/smo-practice)                    |practice-headers|:white_check_mark:|:x:|:x:
