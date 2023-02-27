@@ -16,5 +16,5 @@
 class YukimaruRacePlayer : public PlayerActorBase , public IUseDimension {
     public:
         void initPlayer(al::ActorInitInfo const &, PlayerInitInfo const &);
-        undefined size[0x1A8];
+        u8 size[0x1A8];
 };

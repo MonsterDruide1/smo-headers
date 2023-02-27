@@ -45,7 +45,7 @@ namespace nn::ui2d {
     class Texture;
 }
 
-#include "types.h"
+#include <basis/seadTypes.h>
 
 template<class T>
 al::LiveActor* createActorFunction(const char *name);
@@ -128,7 +128,7 @@ namespace al
 
     void setPaneTexture(al::IUseLayout *, char const *, nn::ui2d::TextureInfo const *);
 
-    void setPaneString(al::IUseLayout *layout, char const *paneName, char16_t const *, ushort);
+    void setPaneString(al::IUseLayout *layout, char const *paneName, char16_t const *, u8);
 
     void setPaneStringFormat(al::IUseLayout *layout, char const *paneName, char const *format,...);
 
@@ -219,11 +219,11 @@ namespace al
 
     // byml stuff
 
-    bool tryGetByamlU8(uchar *,al::ByamlIter const&,char const*);
-    bool tryGetByamlU16(ushort *,al::ByamlIter const&,char const*);
+    bool tryGetByamlU8(u8 *,al::ByamlIter const&,char const*);
+    bool tryGetByamlU16(u8 *,al::ByamlIter const&,char const*);
     bool tryGetByamlS16(short *,al::ByamlIter const&,char const*);
     bool tryGetByamlS32(int *,al::ByamlIter const&,char const*);
-    bool tryGetByamlU32(uint *,al::ByamlIter const&,char const*);
+    bool tryGetByamlU32(u32 *,al::ByamlIter const&,char const*);
     bool tryGetByamlS64(long *,al::ByamlIter const&,char const*);
     bool tryGetByamlU64(ulong *,al::ByamlIter const&,char const*);
     bool tryGetByamlF32(float *,al::ByamlIter const&,char const*);
@@ -290,7 +290,7 @@ namespace al
     void invalidateHitSensor(al::LiveActor *, const char *);
     void validateHitSensor(al::LiveActor *, const char *);
     
-    void addHitSensor(al::LiveActor *actor, al::ActorInitInfo const &initInfo, char const *sensorName, uint typeEnum, float radius, ushort maxCount, sead::Vector3f const& position);
+    void addHitSensor(al::LiveActor *actor, al::ActorInitInfo const &initInfo, char const *sensorName, u32 typeEnum, float radius, u8 maxCount, sead::Vector3f const& position);
 
     bool isMsgPlayerTrampleReflect(al::SensorMsg const *);
 
@@ -391,7 +391,7 @@ namespace al
 
     // misc
 
-    void readSaveDataSync(const char* dataFile, uint, uint);
+    void readSaveDataSync(const char* dataFile, u32, u32);
     
     bool isSuccessSaveDataSequence();
 
@@ -474,7 +474,7 @@ namespace al
 
     bool isEqualSubString(char const *, char const *);
 
-    bool isOnGround(al::LiveActor const*, uint);
+    bool isOnGround(al::LiveActor const*, u32);
 
     bool isActiveDemo(al::Scene const *);
 

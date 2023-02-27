@@ -2,7 +2,7 @@
 
 #include "al/actor/ActorDimensionKeeper.h"
 #include "game/Info/QuestInfo.h"
-#include "types.h"
+#include <basis/seadTypes.h>
 
 #include "game/Info/ShineInfo.h"
 #include "game/Interfaces/IUseDimension.h"
@@ -27,10 +27,10 @@ class Shine : public al::LiveActor , public IUseDimension {
 
         void setGrandShine(void);
 
-        undefined padding[0x10];
+        u8 padding[0x10];
         // 0x11C mIsEmptyShine
         ShineInfo *curShineInfo; // 0x120
-        undefined padding_290[0x278 - 0x128];
+        u8 padding_290[0x278 - 0x128];
         QuestInfo *shineQuestInfo; // 0x278
         void *unkPtr1; // 0x280
         ActorDimensionKeeper *mDimensionKeeper; // 0x288

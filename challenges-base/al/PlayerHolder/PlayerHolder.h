@@ -4,7 +4,7 @@
 #include "al/scene/Scene.h"
 #include "al/LiveActor/LiveActor.h"
 #include "game/Player/PlayerActorHakoniwa.h"
-#include "types.h"
+#include <basis/seadTypes.h>
 
 namespace al {
 
@@ -23,7 +23,7 @@ namespace al {
             bool isExistPadRumbleKeeper(int) const;
             al::PadRumbleKeeper *getPadRumbleKeeper(int) const;
 
-            undefined unkPointer[0x8];
+            u8 unkPointer[0x8];
             int bufferSize;
     };
 

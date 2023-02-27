@@ -821,7 +821,7 @@ bool sendMsgKuribo2DTouch(al::HitSensor*, al::HitSensor*);
 bool sendMsgKuriboCollisionDamage(al::HitSensor*, al::HitSensor*);
 bool sendMsgKuriboCollisionKill(al::HitSensor*, al::HitSensor*);
 bool sendMsgKuriboFlick(al::HitSensor*, al::HitSensor*);
-bool sendMsgKuriboTowerOn(al::HitSensor*, al::HitSensor*, uint);
+bool sendMsgKuriboTowerOn(al::HitSensor*, al::HitSensor*, u32);
 bool sendMsgPartyPopperSoundAttack(al::HitSensor*, al::HitSensor*);
 bool sendMsgYokinBallAttack(al::HitSensor*, al::HitSensor*);
 bool sendMsgYoshiDirectEat(al::HitSensor*, al::HitSensor*);

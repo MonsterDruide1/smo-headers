@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 #include "al/LiveActor/LiveActor.h"
 
 class HackCapThrowParam { // stores parameters used in calculating the way HackCap is thrown

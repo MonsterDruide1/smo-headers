@@ -81,7 +81,7 @@ void setPaneTexture(al::IUseLayout*, char const*, nn::ui2d::TextureInfo const*);
 
 void setSensorFollowPosOffset(al::LiveActor*, sead::Vector3f const&);
 
-// void setPaneString(al::IUseLayout *layout, char const *paneName, char16_t const *, ushort);
+// void setPaneString(al::IUseLayout *layout, char const *paneName, char16_t const *, u8);
 
 void setPaneStringFormat(al::IUseLayout* layout, char const* paneName, char const* format, ...);
 

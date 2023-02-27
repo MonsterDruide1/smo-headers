@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <basis/seadTypes.h>
 
 #include "al/scene/Scene.h"
 #include "al/audio/AudioDirector.h"
