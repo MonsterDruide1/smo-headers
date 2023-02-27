@@ -1,6 +1,6 @@
 #pragma once
 
-#include "agl/DrawContext.h"
+#include "agl/common/aglDrawContext.h"
 #include "sead/gfx/seadFrameBuffer.h"
 
 // seems to be a static class for managing agl::fctr::GPUStressChecker
