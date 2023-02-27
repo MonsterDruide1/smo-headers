@@ -9,8 +9,8 @@
 #include "types.h"
 #include "UniqueObjInfo.h"
 
-#include "sead/math/seadVector.h"
-#include "sead/stream/seadStream.h"
+#include "math/seadVector.h"
+#include "stream/seadStream.h"
 
 namespace al {
     class ActorInitInfo;

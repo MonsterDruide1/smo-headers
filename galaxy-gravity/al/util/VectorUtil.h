@@ -1,7 +1,7 @@
 #pragma once
 
-#include <sead/math/seadQuat.h>
-#include <sead/math/seadVector.h>
+#include <math/seadQuat.h>
+#include <math/seadVector.h>
 #include "al/LiveActor/LiveActor.h"
 
 namespace al {

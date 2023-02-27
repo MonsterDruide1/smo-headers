@@ -2,7 +2,7 @@
 
 #include "al/byaml/ByamlIter.h"
 #include "al/nerve/NerveExecutor.h"
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 
 struct CameraAngleUpdateInfo;
 

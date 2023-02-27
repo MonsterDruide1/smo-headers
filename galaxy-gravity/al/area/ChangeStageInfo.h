@@ -4,8 +4,8 @@
 
 #include "game/GameData/GameDataHolder.h"
 
-#include <sead/math/seadVector.h>
-#include <sead/math/seadMatrix.h>
+#include <math/seadVector.h>
+#include <math/seadMatrix.h>
 
 class ChangeStageInfo {
     public:

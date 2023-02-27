@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 #include "al/LiveActor/LiveActor.h"
 #include "al/camera/CameraTargetBase.h"
 

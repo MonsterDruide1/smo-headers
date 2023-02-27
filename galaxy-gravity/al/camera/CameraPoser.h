@@ -17,10 +17,10 @@
 #include "CameraObjectRequestInfo.h"
 #include "al/rail/RailRider.h"
 
-#include "sead/math/seadQuat.h"
-#include "sead/gfx/seadCamera.h"
-#include "sead/math/seadVector.h"
-#include "sead/math/seadMatrix.h"
+#include "math/seadQuat.h"
+#include "gfx/seadCamera.h"
+#include "math/seadVector.h"
+#include "math/seadMatrix.h"
 
 // size is 0x140/320 bytes
 namespace al {

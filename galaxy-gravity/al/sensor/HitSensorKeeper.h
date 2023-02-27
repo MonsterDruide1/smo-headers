@@ -3,8 +3,8 @@
 #include "types.h"
 #include "al/LiveActor/LiveActor.h"
 #include "al/sensor/SensorHitGroup.h"
-#include "sead/math/seadVector.h"
-#include "sead/math/seadMatrix.h"
+#include "math/seadVector.h"
+#include "math/seadMatrix.h"
 #include "HitSensor.h"
 
 namespace al

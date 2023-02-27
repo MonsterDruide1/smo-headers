@@ -4,7 +4,7 @@
 #include "al/camera/alCameraPoserFunction.h"
 #include "al/util.hpp"
 
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 
 namespace al {
     class CameraPoserFix : public CameraPoser {

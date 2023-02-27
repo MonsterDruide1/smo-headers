@@ -1,8 +1,8 @@
 #pragma once
 
-#include "agl/DrawContext.h"
-#include "agl/RenderBuffer.h"
-#include "sead/framework/seadGameFramework.h"
+#include "agl/common/aglDrawContext.h"
+#include "agl/common/aglRenderBuffer.h"
+#include "framework/seadGameFrameworkNx.h"
 #include "al/hio/HioNode.h"
 
 namespace al

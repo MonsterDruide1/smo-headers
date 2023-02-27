@@ -6,8 +6,8 @@
 #include "al/hio/HioNode.h"
 #include "al/scene/SceneObjHolder.h"
 #include "al/switch/StageSwitchKeeper.h"
-#include "sead/math/seadMatrix.h"
-#include "sead/math/seadVector.h"
+#include "math/seadMatrix.h"
+#include "math/seadVector.h"
 
 namespace al {
 

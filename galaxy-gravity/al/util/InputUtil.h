@@ -1,8 +1,8 @@
 #pragma once
 
-#include <sead/controller/seadController.h>
-#include <sead/controller/seadControllerMgr.h>
-#include <sead/math/seadVector.h>
+#include <controller/seadController.h>
+#include <controller/seadControllerMgr.h>
+#include <math/seadVector.h>
 
 namespace al {
 class IUseCamera;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 #include "al/scene/Scene.h"
 #include "al/LiveActor/LiveActor.h"
 #include "game/Player/PlayerActorHakoniwa.h"

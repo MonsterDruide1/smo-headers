@@ -1,7 +1,7 @@
 #pragma once
 
 #include "al/LiveActor/LiveActor.h"
-#include "sead/math/seadQuat.h"
+#include "math/seadQuat.h"
 
 class HackCapJointControlKeeper {
     public:

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "AreaObj.h"
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 
 namespace al
 {

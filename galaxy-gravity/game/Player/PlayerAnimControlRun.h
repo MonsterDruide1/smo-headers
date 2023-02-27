@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 #include "PlayerAnimator.h"
 #include "PlayerConst.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 #include "al/sensor/HitSensor.h"
 
 class ExternalForceKeeper

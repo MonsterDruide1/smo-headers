@@ -5,16 +5,18 @@
 #include "al/layout/LayoutActor.h"
 #include "al/layout/LayoutKit.h"
 
-#include "sead/math/seadVector.h"
-#include "sead/prim/seadSafeString.h"
-#include "sead/heap/seadHeap.h"
-#include "sead/basis/seadNew.hpp"
-#include "sead/gfx/seadContext.h"
-#include "sead/framework/seadFramework.h"
+#include "math/seadVector.h"
+#include "prim/seadSafeString.h"
+#include "heap/seadHeap.h"
+#include "basis/seadNew.h"
+#include "gfx/seadDrawContext.h"
+#include "framework/seadFramework.h"
 
-#include "agl/DrawContext.h"
+#include "agl/common/aglDrawContext.h"
 
-#include "nn/ui2d/Texture.h"
+namespace nn::ui2d {
+    class Texture;
+}
 
 #include "types.h"
 

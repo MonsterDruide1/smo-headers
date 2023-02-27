@@ -1,8 +1,8 @@
 #pragma once
 
 #include "CameraPoser.h"
-#include "sead/math/seadVector.h"
-#include "sead/math/seadQuat.h"
+#include "math/seadVector.h"
+#include "math/seadQuat.h"
 
 namespace alCameraPoserFunction {
 

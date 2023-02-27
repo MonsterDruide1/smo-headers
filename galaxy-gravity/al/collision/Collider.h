@@ -1,7 +1,7 @@
 #pragma once
 
-#include <sead/math/seadVector.h>
-#include <sead/math/seadMatrix.h>
+#include <math/seadVector.h>
+#include <math/seadMatrix.h>
 
 #include "al/hio/HioNode.h"
 #include "CollisionDirector.h"

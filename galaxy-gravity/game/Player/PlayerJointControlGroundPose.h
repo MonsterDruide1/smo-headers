@@ -1,7 +1,7 @@
 #pragma once
 
 #include "al/LiveActor/LiveActor.h"
-#include "sead/container/seadSafeArray.h"
+#include "container/seadSafeArray.h"
 
 class PlayerJointControlGroundPose {
 public:

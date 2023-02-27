@@ -1,8 +1,8 @@
 #pragma once
 
 #include "al/hio/HioNode.h"
-#include "sead/math/seadMatrix.h"
-#include "sead/math/seadVector.h"
+#include "math/seadMatrix.h"
+#include "math/seadVector.h"
 
 namespace al {
 class AreaShape : public HioNode {

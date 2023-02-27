@@ -2,7 +2,7 @@
 
 #include "CameraPoser.h"
 #include "al/actor/Placement.h"
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 
 namespace alCameraPoserFunction {
 

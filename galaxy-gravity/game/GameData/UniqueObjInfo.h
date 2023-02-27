@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sead/prim/seadSafeString.hpp"
+#include "prim/seadSafeString.hpp"
 #include "types.h"
 
 class UniqObjInfo {

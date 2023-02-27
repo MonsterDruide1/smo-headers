@@ -1,11 +1,11 @@
 #pragma once
 
 #include "types.h"
-#include "sead/prim/seadSafeString.h"
+#include "prim/seadSafeString.h"
 #include "FunctorBase.h"
-#include "sead/thread/seadDelegateThread.h"
-#include "sead/thread/seadMessageQueue.h"
-#include "sead/mc/seadCoreInfo.h"
+#include "thread/seadDelegateThread.h"
+#include "thread/seadMessageQueue.h"
+#include "mc/seadCoreInfo.h"
 
 namespace al
 {

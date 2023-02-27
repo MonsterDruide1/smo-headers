@@ -6,7 +6,7 @@
 
 #include "al/LiveActor/LiveActor.h" // for SensorMsg
 
-#include <sead/math/seadVector.h>
+#include <math/seadVector.h>
 
 struct SaveObjInfo;
 struct HackEndParam;
