@@ -12,8 +12,6 @@
 #include "al/layout/LayoutActor.h"
 #include "al/layout/LayoutInitInfo.h"
 
-typedef unsigned int uint;
-
 namespace al {
 
     struct Scene;
@@ -131,7 +129,7 @@ namespace al {
 
     sead::Quatf* getQuatPtr(LiveActor *);
 
-    sead::Vector3f* getOnGroundNormal(const LiveActor *, uint);
+    sead::Vector3f* getOnGroundNormal(const LiveActor *, u32);
 
     void scaleVelocity(LiveActor*, float);
     void scaleVelocityDirection(LiveActor*, sead::Vector3f const &, float);

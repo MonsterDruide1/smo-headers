@@ -97,7 +97,7 @@ namespace al
 
         void initRailKeeper(al::ActorInitInfo const&, char const*);
         
-        void initCollider(float, float, uint);
+        void initCollider(float, float, u32);
         
         void initItemKeeper(int);
 

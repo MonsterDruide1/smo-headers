@@ -13,7 +13,7 @@ namespace al
     {
     public:
         HitSensorKeeper(int);
-        bool addSensor(al::LiveActor *sensorHost, char const *sensorName, u32 typeEnum, float radius, ushort maxCount, const sead::Vector3f *position, const sead::Matrix34f *matrix, const sead::Vector3f &scale);
+        bool addSensor(al::LiveActor *sensorHost, char const *sensorName, u32 typeEnum, float radius, u16 maxCount, const sead::Vector3f *position, const sead::Matrix34f *matrix, const sead::Vector3f &scale);
         void update(void);
         int getSensorNum(void) const;
         al::HitSensor *getSensor(int) const;

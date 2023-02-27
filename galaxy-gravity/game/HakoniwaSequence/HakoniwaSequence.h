@@ -42,7 +42,7 @@ public:
     void drawMain(void);
     al::Scene *getCurrentScene(void) const; // {return this->curScene}
 
-    undefined padding[0x90];
+    u8 padding[0x90];
     al::Scene *curScene;                        // 0xB0
     GameDataHolder *mGameDataHolder;            // 0xB8
     al::GamePadSystem *mGamepadSys;             // 0xC0

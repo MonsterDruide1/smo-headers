@@ -47,7 +47,7 @@ namespace al
 
     void setPaneTexture(IUseLayout *, char const *, nn::ui2d::TextureInfo const *);
 
-    //void setPaneString(IUseLayout *layout, char const *paneName, char16_t const *, ushort);
+    //void setPaneString(IUseLayout *layout, char const *paneName, char16_t const *, u16);
 
     void setPaneStringFormat(IUseLayout *layout, char const *paneName, char const *format, ...);
 
@@ -98,14 +98,14 @@ namespace al
 
     // sensor stuff
 
-    enum SensorType : uint {
+    enum SensorType : u32 {
         Unknown, // 0
         Player, // 1
         PlayerAttack, // 2
         PlayerFoot // 3
     };
 
-    void addHitSensor(LiveActor *actor, ActorInitInfo const &initInfo, char const *sensorName, uint typeEnum, float radius, ushort maxCount, sead::Vector3f const &position);
+    void addHitSensor(LiveActor *actor, ActorInitInfo const &initInfo, char const *sensorName, u32 typeEnum, float radius, u16 maxCount, sead::Vector3f const &position);
 
     // audio
 

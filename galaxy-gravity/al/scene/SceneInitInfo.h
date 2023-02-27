@@ -8,7 +8,7 @@ namespace al {
     struct SceneInitInfo {
         al::GameSystemInfo * gameSysInfo;
         GameDataHolderAccessor gameDataHolder;
-        undefined field_0x10[8];
+        u8 field_0x10[8];
         char *initStageName;
         u32 scenarioNo;
     };

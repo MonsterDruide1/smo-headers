@@ -23,7 +23,7 @@ namespace al {
             bool isExistPadRumbleKeeper(int) const;
             al::PadRumbleKeeper *getPadRumbleKeeper(int) const;
 
-            undefined unkPointer[0x8];
+            u8 unkPointer[0x8];
             int bufferSize;
     };
 
