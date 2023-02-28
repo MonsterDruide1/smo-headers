@@ -27,7 +27,7 @@ Name | Path | Working | Cleaned libraries | Merged | into
 [OdysseyHeaders](https://github.com/GRAnimated/OdysseyHeaders)                  |granimated-headers|:white_check_mark:|:white_check_mark:|:x:
 [Visible-HitSensors](https://github.com/Mars2032/Visible-HitSensors)            |visible-hitsensors|:white_check_mark:|:x:|:x:
 [Starlight-SMO-Example](https://github.com/brycewithfiveunderscores/Starlight-SMO-Example)|starlight-example|:white_check_mark:|:x:|:x:
-[Starlight-SMO-LayoutEditing](https://github.com/CraftyBoss/Starlight-SMO-LayoutEditing)|starlight-layout|:white_check_mark:|:x:|:x:
+[Starlight-SMO-LayoutEditing](https://github.com/CraftyBoss/Starlight-SMO-LayoutEditing)|starlight-layout|:white_check_mark:|:white_check_mark:|:white_check_mark:|visible-hitsensors
 [SMO-Galaxy-Gravity](https://github.com/CraftyBoss/SMO-Galaxy-Gravity)          |galaxy-gravity|:white_check_mark:|:white_check_mark:|:x:
 [OdysseyHeaders](https://github.com/RicBent/OdysseyHeaders)                     |ricbent-headers|:x:|:x:|:x:
 [Superstar](https://github.com/GRAnimated/Superstar)                            |granimated-superstar|:white_check_mark:|:white_check_mark:|:white_check_mark:|odyssey-reversed
