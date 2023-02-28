@@ -1,8 +1,8 @@
 #pragma once
 
 #include "al/projection/Projection.h"
-#include <sead/gfx/seadCamera.h>
-#include <sead/gfx/seadProjection.h>
+#include <gfx/seadCamera.h>
+#include <gfx/seadProjection.h>
 
 namespace al
 {

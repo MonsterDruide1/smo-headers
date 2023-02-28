@@ -1,7 +1,7 @@
 #pragma once
 
 #include "al/byaml/ByamlIter.h"
-#include "sead/math/seadVector.h"
+#include "math/seadVector.h"
 
 namespace alByamlLocalUtil
 {

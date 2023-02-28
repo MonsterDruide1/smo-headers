@@ -1,8 +1,8 @@
 #pragma once
 
-#include "sead/prim/seadSafeString.h"
-#include "sead/resource/seadResource.h"
-#include "sead/filedevice/seadArchiveFileDevice.h"
+#include "prim/seadSafeString.h"
+#include "resource/seadResource.h"
+#include "filedevice/seadArchiveFileDevice.h"
 
 namespace al
 {

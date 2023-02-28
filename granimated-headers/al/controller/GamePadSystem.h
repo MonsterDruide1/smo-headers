@@ -6,7 +6,7 @@
 #pragma once
 
 #include "types.h"
-#include "sead/prim/seadSafeString.h"
+#include "prim/seadSafeString.h"
 
 namespace al
 {

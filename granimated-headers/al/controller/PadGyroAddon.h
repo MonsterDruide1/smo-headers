@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include "sead/controller/seadController.h"
-#include "sead/math/seadVector.h"
+#include "controller/seadControllerAddon.h"
+#include "math/seadVector.h"
 
 namespace al
 {

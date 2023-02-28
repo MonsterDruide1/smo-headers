@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "sead/controller/seadController.h"
+#include "controller/seadController.h"
 
 namespace al
 {

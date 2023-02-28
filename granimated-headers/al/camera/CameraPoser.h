@@ -1,7 +1,7 @@
 #pragma once
 
 #include <al/camera/CameraViewInfo.h>
-#include <sead/gfx/seadProjection.h>
+#include <gfx/seadProjection.h>
 
 namespace al
 {

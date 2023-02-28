@@ -6,7 +6,7 @@
 #pragma once
 
 #include "types.h"
-#include "sead/gfx/seadColor.h"
+#include "gfx/seadColor.h"
 
 namespace al
 {

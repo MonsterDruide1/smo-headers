@@ -1,9 +1,9 @@
 #pragma once
 
-#include "nn/g3d.h"
-#include "sead/filedevice/seadArchiveFileDevice.h"
-#include "sead/resource/seadResource.h"
-#include "sead/prim/seadSafeString.hpp"
+#include "nn/g3d/ResFile.h"
+#include "filedevice/seadArchiveFileDevice.h"
+#include "resource/seadResource.h"
+#include "prim/seadSafeString.hpp"
 
 namespace al
 {
