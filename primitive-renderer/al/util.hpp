@@ -92,6 +92,18 @@ namespace al
     sead::Vector3f &getTrans(al::LiveActor const*);
     sead::Vector3f *getTransPtr(al::LiveActor *);
 
+    sead::Vector3f &getGravity(al::LiveActor const*);
+    sead::Vector3f *getGravityPtr(al::LiveActor const*);
+
+    sead::Vector3f &getUp(al::LiveActor const*);
+    sead::Vector3f *getUpPtr(al::LiveActor const*);
+
+    sead::Vector3f &getFront(al::LiveActor const*);
+    sead::Vector3f *getFrontPtr(al::LiveActor const*);
+
+    sead::Vector3f &getCameraUp(al::LiveActor const*);
+    sead::Vector3f *getCameraUpPtr(al::LiveActor const*);
+
     sead::Vector3f &getRotate(al::LiveActor const*);
     sead::Vector3f *getRotatePtr(al::LiveActor *);
 
@@ -150,9 +162,23 @@ namespace al
 
     char const *getActionFrame(al::LiveActor const *);
 
+    sead::Vector3f *getCameraPos(al::IUseCamera const *, int);
+
+    sead::Vector3f* getSensorPos(al::LiveActor const*, const char*);
+
+    float getSensorRadius(al::LiveActor const*, char const*);
+
     // setters
 
+    void setTransY(al::LiveActor *, float);
+    void setTrans(al::LiveActor *, sead::Vector3f const &);
+    void setScaleAll(al::LiveActor *, float);
+    void setGravity(al::LiveActor const *, sead::Vector3f const &);
+    void setFront(al::LiveActor *, sead::Vector3f const &);
+    void setQuat(al::LiveActor *, const sead::Quatf &);
     void setVelocityZero(al::LiveActor *);
+    void setVelocityZero(al::LiveActor *);
+    void setSensorFollowPosOffset(al::LiveActor*, sead::Vector3f const&);
 
     void setEffectParticleScale(al::IUseEffectKeeper *actor, char const *effectName, float scale);
 
@@ -200,6 +226,22 @@ namespace al
     f32 calcDistance(al::LiveActor const *, sead::Vector3f const&); // calculates distance between an actor and a position in the world
 
     void calcFrontDir(sead::Vector3f *result, al::LiveActor const *actor);
+
+    // bools
+
+    bool isInAreaObj(al::LiveActor const *, const char *);
+    bool isInDeathArea(al::LiveActor const *);
+    bool getArg(int *, const al::ActorInitInfo &, const char *); // gets an int argument from the actorinitinfo by a char* key
+    bool isActiveDemo(const al::Scene *);
+    bool isAreaTarget(al::LiveActor const *);
+    bool isSensorName(al::HitSensor const*, char const*);
+
+    // math
+
+    float powerIn(float base, float exponent);
+    float powerOut(float base, float exponent);
+
+    float squareIn(float value);
 
     // velocity stuff
 
@@ -311,6 +353,14 @@ namespace al
 
     bool tryGetAreaObjStringArg(const char **, al::AreaObj const *, const char *);
 
+    bool tryGetArg(int *, const al::ActorInitInfo &, const char *);
+    bool tryGetArg(float *, const al::ActorInitInfo &, const char *);
+    bool tryGetArg(bool *, const al::ActorInitInfo  &, const char *);
+
+    bool tryGetStringArg(const char **, al::ActorInitInfo const *, const char *);
+
+    bool isEqualString(const char *stringA, const char *stringB);
+
     void offCollide(al::LiveActor *);
     void onCollide(al::LiveActor *);
 
@@ -332,6 +382,19 @@ namespace al
 
     const unsigned char *tryGetBymlFromArcName(sead::SafeStringBase<char> const &, sead::SafeStringBase<char> const &);
 
+    void initActor(al::LiveActor *, al::ActorInitInfo const &);
+
+    bool isObjectName(al::ActorInitInfo const&, char const*);
+    bool isObjectName(al::PlacementInfo const&, char const*);
+
+    void invalidateHitSensors(al::LiveActor*);
+
+    void hideModelIfShow(al::LiveActor*);
+    void showModelIfHide(al::LiveActor*);
+
+    void hideModel(al::LiveActor*);
+    void showModel(al::LiveActor*);
+    
     class ActorInitInfo;
 
     bool getArg(int *, const al::ActorInitInfo &, const char *);

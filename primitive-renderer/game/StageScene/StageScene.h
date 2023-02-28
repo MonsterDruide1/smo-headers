@@ -13,6 +13,19 @@
 class StageScene : public al::Scene
 {
     public:
+        StageScene();
+
+        virtual ~StageScene();
+        virtual void init(const al::SceneInitInfo &);
+        virtual void appear();
+        virtual void kill();
+        
+        virtual void control();
+        virtual void drawMain();
+
+        bool isEnableSave(void) const;
+
+        // 0xE0 stageName
 
         bool isPause() const;
         // 0x88 StageResourceKeeper *

@@ -29,6 +29,7 @@ namespace al
         virtual al::NerveKeeper* getNerveKeeper() const;
 
         void makeActorDead(void);
+        void makeActorAlive(void);
 
         void kill(void);
 

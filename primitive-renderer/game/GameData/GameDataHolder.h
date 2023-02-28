@@ -12,18 +12,22 @@ namespace al {
 }
 
 #include "al/scene/Scene.h"
-#include "game/GameData/GameDataFile.h"
+#include "GameDataFile.h"
+#include "GameDataHolderBase.h"
+#include "al/message/MessageSystem.h"
+#include "game/WorldList/WorldList.h"
+#include "sead/prim/seadSafeString.h"
 
-class GameDataHolder : public al::ISceneObj
+class GameDataHolder : public GameDataHolderBase, public al::ISceneObj, public al::HioNode, public al::IUseMessageSystem
 {
 public:
-    // GameDataHolder(al::MessageSystem const *);
+    GameDataHolder(al::MessageSystem const *);
     GameDataHolder();
 
     virtual ~GameDataHolder();
 
     virtual char* getSceneObjName() const;
-    // virtual al::MessageSystem* getMessageSystem() const;
+    virtual al::MessageSystem* getMessageSystem() const;
 
     void setPlayingFileId(s32 file);
     void intitalizeData();
@@ -88,9 +92,18 @@ public:
     // GameDataFile* mGameDataFile;
 
     u64* _8;
-    int padding;
-    GameDataFile* mDataFileArr; // _18
-    GameDataFile* mGameDataFile;
+    undefined8 padding;
+    undefined8 _padding;
+    GameDataFile* mDataFileArr; // 0x18
+    GameDataFile* mGameDataFile; // 0x20
+    unsigned char padding_190[0x168];
+    WorldList *mWorldList; // 0x190
+
+    // different version:
+    // u64* _8;
+    // al::MessageSystem* mMessageSystem; // _10
+    // GameDataFile* mDataFileArr; // _18
+    // GameDataFile* _20;
     // u64 _28;
     // u64 _30;
     // u64* _38; // SaveDataAccessSequence*
