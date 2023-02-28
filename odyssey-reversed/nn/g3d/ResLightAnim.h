@@ -1,11 +1,10 @@
 #pragma once
 
-#include "BindFuncTable.h"
-
 namespace nn
 {
     namespace g3d
     {
+        class BindFuncTable;
         class ResLightAnim
         {
         public:

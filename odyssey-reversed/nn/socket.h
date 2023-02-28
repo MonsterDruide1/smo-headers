@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include <sys/socket.h>
 #include "types.h"
 
 // both of these are a part of nn::socket but whatever
@@ -27,16 +28,21 @@ namespace nn
 {
     namespace socket
     {
-        Result Initialize(void* memoryPool, u64, u64, s32);
+        struct InAddr {
+            u32 addr;
+        };
 
-        s32 Socket(s32, s32, s32);
-        s32 Connect(s32 socket,	const sockaddr* address, u32 addressLen);
-
-        s32 Send(s32 socket, const void* data, u64 dataLen, s32 unk);
+        Result Initialize(void *pool, ulong poolSize, ulong allocPoolSize, int concurLimit);
+        Result Finalize();
+        s32 SetSockOpt(s32 socket, s32 socketLevel, s32 option, void const *, u32 len);
+        u64 Send(s32 socket, void const *buffer, u64 bufferLength, s32 flags);
         s32 Recv(s32 socket, void* out, u64 outLen, s32 unk);
-
-        u16 InetHtons(u16 val);
-        s32 InetAton(const char* addressStr, in_addr* addressOut);
-
+        s32 Socket(s32 domain, s32 type, s32 proto);
+        u16 InetHtons(u16);
+        u32 InetAton(const char* str, InAddr*);
+        u32 Connect(s32 socket, const sockaddr *addr, u32 addrLen);
+        u32 Bind(s32 socket, const sockaddr* addr, u32 addrLen);
+        u32 Listen(s32 socket, s32 backlog);
+        u32 Accept(s32 socket, sockaddr* addrOut, u32* addrLenOut);
     };
 };

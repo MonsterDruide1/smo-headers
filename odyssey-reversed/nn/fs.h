@@ -15,7 +15,14 @@ namespace nn
     namespace fs
     {
         typedef u64 UserId;
-        struct DirectoryEntry;
+        
+        struct DirectoryEntry {
+            char name[0x300+1];
+            char _x302[3];
+            u8 type;
+            char _x304;
+            s64 fileSize;
+        };
 
         struct FileHandle
         {
@@ -27,15 +34,42 @@ namespace nn
             void* handle;
         };
 
-        struct WriteOption
-        {
-            s32 _0; // some sort of flag?
-        };
-
         enum DirectoryEntryType
         {
-            DIRECTORY,
-            FILE
+            DirectoryEntryType_Directory,
+            DirectoryEntryType_File
+        };
+
+        enum OpenMode 
+        {
+            OpenMode_Read = BIT(0),
+            OpenMode_Write = BIT(1),
+            OpenMode_Append = BIT(2),
+
+            OpenMode_ReadWrite = OpenMode_Read | OpenMode_Write
+        };
+
+        enum OpenDirectoryMode {
+            OpenDirectoryMode_Directory = BIT(0),
+            OpenDirectoryMode_File = BIT(1),
+            OpenDirectoryMode_All = OpenDirectoryMode_Directory | OpenDirectoryMode_File
+        };
+
+        enum WriteOptionFlag 
+        {
+            WriteOptionFlag_Flush = BIT(0)
+        };
+
+        struct WriteOption
+        {
+            int flags;
+
+            static WriteOption CreateOption(int flags)
+            {
+                WriteOption op;
+                op.flags = flags;
+                return op;
+            }
         };
 
         // ROM
@@ -59,8 +93,10 @@ namespace nn
         void CloseFile(FileHandle fileHandle);
         Result FlushFile(FileHandle fileHandle);
         Result DeleteFile(char const* filepath);
-        Result ReadFile(u64 *, nn::fs::FileHandle, s64, void *, u64, s32 const &);
-        Result WriteFile(FileHandle handle, s64 fileOffset, void const *buff, s64 size, WriteOption const &option);
+        Result ReadFile(u64* outSize, nn::fs::FileHandle handle, s64 offset, void* buffer, u64 bufferSize, s32 const &);
+        Result ReadFile(u64* outSize, nn::fs::FileHandle handle, s64 offset, void* buffer, u64 bufferSize);
+        Result ReadFile(nn::fs::FileHandle handle, s64 offset, void* buffer, u64 bufferSize);
+        Result WriteFile(FileHandle handle, s64 fileOffset, void const *buff, u64 size, WriteOption const &option);
         Result GetFileSize(s64* size, FileHandle fileHandle);
 
         // DIRECTORY
@@ -69,6 +105,7 @@ namespace nn
         void CloseDirectory(DirectoryHandle directoryHandle);
         Result ReadDirectory(s64*, DirectoryEntry*, DirectoryHandle directoryHandle, s64);
         Result CreateDirectory(char const* directorypath);
+        Result GetDirectoryEntryCount(s64*, DirectoryHandle);
 
         // SD
         Result MountSdCard(char const *);

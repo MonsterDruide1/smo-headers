@@ -11,6 +11,8 @@ namespace nn
 {
     namespace crypto
     {
+        void GenerateSha256Hash(void*, ulong, void const*, ulong);
+
         class Sha256Context;
 
         void DecryptAes128Cbc(void *, u64, void const *, u64, void const *, u64, void const *, u64);

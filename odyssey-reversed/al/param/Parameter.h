@@ -9,7 +9,7 @@
 
 namespace al
 {
-    template<typename T>
+    template <typename T>
     class ParameterBase
     {
     public:

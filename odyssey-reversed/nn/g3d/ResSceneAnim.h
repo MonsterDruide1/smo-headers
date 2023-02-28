@@ -14,6 +14,7 @@ namespace nn
 {
     namespace g3d
     {
+        class BindFuncTable;
         class ResSceneAnim
         {
         public:

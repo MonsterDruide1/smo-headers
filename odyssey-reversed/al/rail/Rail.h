@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "PlacementInfo.h"
+#include "al/PlacementInfo.h"
 #include "RailPart.h"
 #include "sead/vector.h"
 #include "types.h"

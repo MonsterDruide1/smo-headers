@@ -6,37 +6,92 @@
 #pragma once
 
 #include "types.h"
+#include "time.h"
 
 namespace nn
 {
     namespace os
     {
-        typedef u64* ThreadType;
+        namespace detail 
+        {
+            class InternalCriticalSection 
+            {
+                u32 Image;
+            };
+
+            class InternalConditionVariable 
+            {
+                u32 Image;
+            };
+        }
+
         typedef u64 Tick;
         typedef u64 LightEventType;
+
+        // https://github.com/misson20000/nn-types/blob/master/nn_os.h
+        struct EventType {
+            nn::os::EventType *_x0;
+            nn::os::EventType *_x8;
+            bool isSignaled;
+            bool initiallySignaled;
+            bool shouldAutoClear;
+            bool isInit;
+            u32 signalCounter;
+            u32 signalCounter2;
+            nn::os::detail::InternalCriticalSection crit;
+            nn::os::detail::InternalConditionVariable condvar;
+        };
+        typedef EventType Event;
+
+        enum EventClearMode {
+            EventClearMode_ManualClear, EventClearMode_AutoClear
+        };
         
-        struct MessageQueueType;
+        struct ThreadType 
+        {
+            u8 _0[0x40];
+            u32 State;
+            bool _44;
+            bool _45;
+            u8 _46;
+            u32 PriorityBase;
+            void* StackBase;
+            void* Stack;
+            size_t StackSize;
+            void* Arg;
+            u64 ThreadFunc;
+            u8  _88[0x100];
+            char Name[0x20];
+            detail::InternalCriticalSection Crit;
+            detail::InternalConditionVariable Condvar;
+            u32 Handle;
+            u8 padding[0x18];
+
+            ThreadType() {};
+        };
+         static_assert(sizeof(ThreadType) == 0x1C0, "");
+
+        struct MessageQueueType {
+            u64 _x0;
+            u64 _x8;
+            u64 _x10;
+            u64 _x18;
+            void* Buffer;
+            u32 MaxCount;
+            u32 Count;
+            u32 Offset;
+            bool Initialized;
+            detail::InternalCriticalSection _x38;
+            detail::InternalConditionVariable _x3C;
+            detail::InternalConditionVariable _x40;
+        };
+
+        struct ConditionVariableType {
+
+        };
+
         struct SystemEvent;
         struct SystemEventType;
-        
-        struct UserExceptionInfo
-        {
-            s32 ExceptionType; // _0
-            u64 _4;
-            u64 _8;
-            u64 GPR[0x1E]; // _10
-            u64 LR; // _100
-            u64 StackPointer; // _108
-            u64 PC; // _110
-            u64 _118;
-            u64 FPR[0x20]; // _120
-            u8 _220[0x320-0x220];
-            u32 PState; // _320
-            u32 AFSR0; // _324
-            u32 AFSR1; // _328
-            u32 ESR; // _32C
-            u64 Far; // _330
-        };
 
         // ARG
         void SetHostArgc(s32);
@@ -72,14 +127,31 @@ namespace nn
         // QUEUE
         void InitializeMessageQueue(nn::os::MessageQueueType *, u64 *buf, u64 queueCount);
         void FinalizeMessageQueue(nn::os::MessageQueueType *);
-        bool TrySendMessageQueue(MessageQueueType* queue, u64* d);
-        void SendMessageQueue(MessageQueueType* queue, u64* d);
-        bool TryReceiveMessageQueue(u64* out, MessageQueueType* queue);
-        void ReceiveMessageQueue(u64* out, MessageQueueType* queue);
-        bool TryPeekMessageQueue(u64 *, nn::os::MessageQueueType const *);
-        void PeekMessageQueue(u64 *, nn::os::MessageQueueType const *);
+
+        bool TrySendMessageQueue(MessageQueueType*, u64);
+        void SendMessageQueue(MessageQueueType*, u64);
+        bool TimedSendMessageQueue(MessageQueueType *, u64, nn::TimeSpan);
+
+        bool TryReceiveMessageQueue(u64* out, MessageQueueType*);
+        void ReceiveMessageQueue(u64* out, MessageQueueType*);
+        bool TimedReceiveMessageQueue(u64* out, MessageQueueType*, nn::TimeSpan);
+
+        bool TryPeekMessageQueue(u64 *, MessageQueueType const *);
+        void PeekMessageQueue(u64 *, MessageQueueType const *);
+        bool TimedPeekMessageQueue(u64*, MessageQueueType const*);
+
         bool TryJamMessageQueue(nn::os::MessageQueueType *, u64);
         void JamMessageQueue(nn::os::MessageQueueType *, u64);
+        bool TimedJamMessageQueue(nn::os::MessageQueueType *, u64, nn::TimeSpan);
+
+        // CONDITION VARIABLE
+        void InitializeConditionVariable(ConditionVariableType*);
+        void FinalizeConditionVariable(ConditionVariableType*);
+        
+        void SignalConditionVariable(ConditionVariableType*);
+        void BroadcastConditionVariable(ConditionVariableType*);
+        void WaitConditionVariable(ConditionVariableType*);
+        u8 TimedWaitConditionVariable(ConditionVariableType*, MutexType*, nn::TimeSpan);
 
         // THREAD
         Result CreateThread(nn::os::ThreadType *, void (*)(void *), void *arg, void *srcStack, u64 stackSize, s32 priority, s32 coreNum);
@@ -94,6 +166,53 @@ namespace nn
         void YieldThread();
         void SuspendThread(nn::os::ThreadType *);
         void ResumeThread(nn::os::ThreadType *);
+        void SleepThread(nn::TimeSpan);
+
+        // EVENTS
+        void InitializeEvent(EventType*, bool initiallySignaled, EventClearMode clearMode);
+        void FinalizeEvent(EventType*);
+        void SignalEvent(EventType*);
+        void WaitEvent(EventType*);
+        bool TryWaitEvent(EventType*);
+        bool TimedWaitEvent(EventType*, nn::TimeSpan);
+        void ClearEvent(EventType*);
+
+        // EXCEPTION HANDLING
+        typedef union {
+            u64 x; ///< 64-bit AArch64 register view.
+            u32 w; ///< 32-bit AArch64 register view.
+            u32 r; ///< AArch32 register view.
+        } CpuRegister;
+        /// Armv8 NEON register.
+
+        typedef union {
+            u128    v; ///< 128-bit vector view.
+            double  d; ///< 64-bit double-precision view.
+            float   s; ///< 32-bit single-precision view.
+        } FpuRegister;
+
+        struct UserExceptionInfo {
+            u32 ErrorDescription;             ///< See \ref ThreadExceptionDesc.
+            u32 pad[3];
+
+            CpuRegister CpuRegisters[29];   ///< GPRs 0..28. Note: also contains AArch32 registers.
+            CpuRegister FP;             ///< Frame pointer.
+            CpuRegister LR;             ///< Link register.
+            CpuRegister SP;             ///< Stack pointer.
+            CpuRegister PC;             ///< Program counter (elr_el1).
+
+            u64 padding;
+
+            FpuRegister FpuRegisters[32];   ///< 32 general-purpose NEON registers.
+
+            u32 PState;                 ///< pstate & 0xFF0FFE20
+            u32 AFSR0;
+            u32 AFSR1;
+            u32 ESR;
+
+            CpuRegister FAR;            ///< Fault Address Register.
+        };
+        void SetUserExceptionHandler(void(*)(UserExceptionInfo*), void*, ulong, UserExceptionInfo*);
 
         // OTHER
         void GenerateRandomBytes(void *, u64);
@@ -103,8 +222,8 @@ namespace nn
 
         namespace detail
         {
-            static s32 g_CommandLineParameter;
-            static char** g_CommandLineParameterArgv;
+            extern s32 g_CommandLineParameter;
+            extern char** g_CommandLineParameterArgv;
         };
     };
 };

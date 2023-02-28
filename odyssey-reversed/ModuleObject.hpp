@@ -61,4 +61,9 @@ namespace rtld
         void ResolveSymbols(bool do_lazy_got_init);
         bool TryResolveSymbol(Elf64_Addr *target_symbol_address, Elf64_Sym *symbol);
     };
-};
+#ifdef __RTLD_6XX__
+static_assert(sizeof(ModuleObject) == 0xD0, "ModuleObject size isn't valid");
+#else
+static_assert(sizeof(ModuleObject) == 0xB8, "ModuleObject size isn't valid");
+#endif
+}  // namespace rtld

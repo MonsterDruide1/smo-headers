@@ -15,6 +15,10 @@ namespace nn
         typedef s32 FocusHandlingMode;
         typedef s32 PerformanceMode;
 
+        struct DisplayVersion {
+            char name[16];
+        };
+
         void Initialize();
         void SetPerformanceConfiguration(nn::oe::PerformanceMode, s32);
         s32 GetOperationMode();
@@ -30,5 +34,6 @@ namespace nn
         void SetUserInactivityDetectionTimeExtended(bool);
         void FinishStartupLogo();
         nn::settings::LanguageCode GetDesiredLanguage();
+        void GetDisplayVersion(DisplayVersion*);
     };
 };

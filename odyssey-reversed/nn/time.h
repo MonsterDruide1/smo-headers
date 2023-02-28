@@ -9,8 +9,38 @@
 
 namespace nn
 {
+    class TimeSpan {
+    public:
+    u64 nanoseconds;
+
+    static TimeSpan FromNanoSeconds(u64 nanoSeconds)
+    {
+        TimeSpan ret;
+        ret.nanoseconds = nanoSeconds;
+        return ret;
+    }
+
+    static TimeSpan FromSeconds(u64 seconds) 
+    {
+        return FromNanoSeconds(seconds * 1000 * 1000 * 1000);
+    }
+    static TimeSpan FromMinutes(u64 minutes) 
+    {
+        return FromNanoSeconds(minutes * 1000 * 1000 * 1000 * 60);
+    }
+    static TimeSpan FromHours(u64 hours) 
+    {
+        return FromNanoSeconds(hours * 1000 * 1000 * 1000 * 60 * 60);
+    }
+    static TimeSpan FromDays(u64 days) 
+    {
+        return FromNanoSeconds(days * 1000 * 1000 * 1000 * 60 * 60 * 24);
+    }
+    };
+
     namespace time
     {
+        
         Result Initialize();
         bool IsInitialzed();
 
@@ -35,6 +65,13 @@ namespace nn
             Saturday
         };
 
+        struct TimeZone
+        {
+            char standardTimeName[0x8];
+            bool _9; // daylight savings or something?
+            s32 utcOffset; // in seconds
+        };
+
         struct CalendarAdditionalInfo
         {
             nn::time::DayOfTheWeek dayOfTheWeek;
@@ -51,13 +88,6 @@ namespace nn
         {
         public:
             static Result GetCurrentTime(nn::time::PosixTime *);
-        };
-
-        struct TimeZone
-        {
-            char standardTimeName[0x8];
-            bool _9; // daylight savings or something?
-            s32 utcOffset; // in seconds
         };
         
         struct TimeZoneRule; // shrug
