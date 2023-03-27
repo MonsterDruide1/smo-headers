@@ -12,7 +12,7 @@
 #include "gfx/seadDrawContext.h"
 #include "framework/seadFramework.h"
 
-#include "agl/common/aglDrawContext.h"
+#include "common/aglDrawContext.h"
 
 namespace nn::ui2d {
     class Texture;

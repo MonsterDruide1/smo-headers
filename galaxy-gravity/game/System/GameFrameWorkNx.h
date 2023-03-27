@@ -1,7 +1,7 @@
 #pragma once
 
-#include "agl/common/aglDrawContext.h"
-#include "agl/common/aglRenderBuffer.h"
+#include "common/aglDrawContext.h"
+#include "common/aglRenderBuffer.h"
 #include "framework/seadGameFrameworkNx.h"
 #include "al/hio/HioNode.h"
 

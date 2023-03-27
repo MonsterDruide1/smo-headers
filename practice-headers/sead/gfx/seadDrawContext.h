@@ -14,6 +14,7 @@ namespace sead
 {
     class DrawContext
     {
+        SEAD_RTTI_BASE(DrawContext)
     public:
         DrawContext();
         virtual ~DrawContext();

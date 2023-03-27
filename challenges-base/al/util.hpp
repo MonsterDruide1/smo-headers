@@ -39,7 +39,7 @@ namespace al
 
 #include "game/Player/PlayerActorHakoniwa.h"
 
-#include "agl/common/aglDrawContext.h"
+#include "common/aglDrawContext.h"
 
 namespace nn::ui2d {
     class Texture;

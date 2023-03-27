@@ -1,8 +1,8 @@
 #pragma once
 
 #include "al/debug/GpuPerf.h"
-#include "agl/common/aglDrawContext.h"
-#include "agl/common/aglRenderBuffer.h"
+#include "common/aglDrawContext.h"
+#include "common/aglRenderBuffer.h"
 #include "sead/framework/seadGameFrameworkNx.h"
 #include "al/hio/HioNode.h"
 

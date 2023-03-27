@@ -33,7 +33,7 @@ namespace sead {
 
 #include "game/Player/PlayerActorHakoniwa.h"
 
-#include "agl/common/aglDrawContext.h"
+#include "common/aglDrawContext.h"
 
 #include "types.h"
 

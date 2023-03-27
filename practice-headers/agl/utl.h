@@ -6,7 +6,7 @@
 #pragma once
 
 #include "../types.h"
-#include "DrawContext.h"
+#include "common/aglDrawContext.h"
 #include "sead/math/seadVector.h"
 #include "sead/math/seadMatrix.h"
 #include "sead/gfx/seadColor.h"

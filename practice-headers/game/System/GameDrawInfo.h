@@ -1,11 +1,12 @@
 #pragma once
 
-//#include "agl/DrawContext.h"
-#include "agl/RenderBuffer.h"
+//#include "common/aglDrawContext.h"
+//#include "RenderBuffer.h"
 
 namespace agl
 {
     struct DrawContext;
+    struct RenderBuffer;
 } // namespace agl
 
 

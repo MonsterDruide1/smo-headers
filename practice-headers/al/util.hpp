@@ -13,7 +13,7 @@ class LogicalFrameBuffer;
 }
 
 #include "sead/basis/seadNew.h"
-#include "sead/gfx/seadContext.h"
+#include "sead/gfx/seadDrawContext.h"
 #include "sead/heap/seadHeap.h"
 #include "sead/math/seadVector.h"
 #include "sead/prim/seadSafeString.h"
@@ -32,7 +32,7 @@ class LogicalFrameBuffer;
 
 #include "game/Player/PlayerActorHakoniwa.h"
 
-#include "agl/DrawContext.h"
+#include "common/aglDrawContext.h"
 
 #include "nn/ui2d/Texture.h"
 

@@ -40,7 +40,7 @@ namespace al
 
 #include "game/Player/PlayerActorHakoniwa.h"
 
-#include "agl/common/aglDrawContext.h"
+#include "common/aglDrawContext.h"
 
 #include <basis/seadTypes.h>
 

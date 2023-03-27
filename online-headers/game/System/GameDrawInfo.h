@@ -1,7 +1,7 @@
 #pragma once
 
-//#include "agl/DrawContext.h"
-#include "agl/common/aglRenderBuffer.h"
+//#include "common/aglDrawContext.h"
+#include "common/aglRenderBuffer.h"
 
 namespace agl
 {

@@ -6,7 +6,7 @@
 #pragma once
 
 #include "types.h"
-#include "DrawContext.h"
+#include "common/aglDrawContext.h"
 #include "RenderTargetColor.h"
 #include "RenderTargetDepth.h"
 #include "sead/math/seadBoundBox.h"
